@@ -3,109 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flipline — the reselling companion that knows your numbers</title>
-<meta name="description" content="Flipline is an offline-first app for resellers: pull live deals from official sources, estimate resale value, and keep the ledger straight — all on your device.">
+<title>Plantburgh Products — small, sharp apps built in Pittsburgh</title>
+<meta name="description" content="Plantburgh LLC designs and builds focused, privacy-first apps — offline-first by default, no accounts, no tracking. Built in Pittsburgh, PA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="products.css">
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="./">Flip<span>line</span></a>
-    <nav class="nav-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
+    <a class="wordmark" href="./">Plantburgh <span>Products</span></a>
+    <a class="contact" href="mailto:reihlandre@gmail.com">Contact</a>
   </div>
 </header>
 
 <main>
   <section class="wrap hero">
-    <div>
-      <h1>Know the flip <em>before</em> you buy.</h1>
-      <p class="sub">Flipline is an offline-first companion for resellers: pull live
-      deals from official sources, snap a photo to identify an item, check sold
-      comps, and see the margin after fees — before your money leaves your pocket.</p>
-      <span class="chip mono"><b>●</b>&nbsp; Coming soon to Google Play</span>
-    </div>
-
-    <aside class="ticket" aria-label="Example flip ticket: how Flipline works a deal">
-      <div class="t-head"><span>Flipline</span><span>flip ticket</span></div>
-      <div class="t-item">KitchenAid K45SS mixer</div>
-      <div class="t-note">yard sale · photo ID match</div>
-      <div class="row"><span>Sourced</span><span class="amt">$25.00</span></div>
-      <div class="row"><span>Est. resale (sold comps)</span><span class="amt">$118.00</span></div>
-      <div class="row"><span>Fees + shipping</span><span class="amt">−$27.70</span></div>
-      <hr class="rule">
-      <div class="row margin"><span>Margin <span class="pct">+261%</span></span><span class="amt">$65.30</span></div>
-      <div class="barcode" aria-hidden="true"></div>
-    </aside>
+    <p class="eyebrow">Plantburgh LLC · Pittsburgh, PA</p>
+    <h1>Small, sharp tools. Your data stays yours.</h1>
+    <p class="sub">We design and build focused apps — offline-first by default,
+    no accounts, no tracking SDKs. Each one does a specific job well and keeps
+    what you enter on your own device.</p>
   </section>
 
-  <section class="wrap features">
-    <div>
-      <p class="eyebrow">Source</p>
-      <h3>Live deals, official feeds</h3>
-      <p>One ranked feed pulled from official retailer APIs and published deal
-      feeds — government auctions, clearance, open-box, daily deals — refreshed
-      on your schedule, with your own keys.</p>
-    </div>
-    <div>
-      <p class="eyebrow">Value</p>
-      <h3>Price it before you pay</h3>
-      <p>Snap a photo to identify an item, scan a tag or barcode, pull sold
-      comps, and let the profit math run: fees, shipping, and mileage included.
-      A deal score tells you when to walk.</p>
-    </div>
-    <div>
-      <p class="eyebrow">Ledger</p>
-      <h3>Bookkeeping that keeps up</h3>
-      <p>Inventory, purchases, sales, expenses, mileage, and tax set-asides in
-      one local ledger — with CSV export shaped for tax time.</p>
-    </div>
-  </section>
+  <section class="wrap shelf" aria-label="Products">
+    <a class="product" href="flipline/">
+      <span class="bin"><b>Flipline</b>Android<br>reselling</span>
+      <span>
+        <span class="name">Know the flip before you buy.</span>
+        <p>An offline-first companion for resellers: live deals from official
+        sources, photo ID, sold comps, and margin after fees — plus inventory,
+        mileage, and bookkeeping shaped for tax time.</p>
+      </span>
+      <span class="status">coming soon · Google Play</span>
+    </a>
 
-  <section class="wrap sources">
-    <p class="eyebrow">Connected sources</p>
-    <ul class="source-tags">
-      <li>GSA Auctions</li>
-      <li>Woot</li>
-      <li>Best Buy</li>
-      <li>Walmart</li>
-      <li>Slickdeals</li>
-      <li>Reddit deals</li>
-      <li>eBay comps</li>
-      <li>Discogs</li>
-      <li>Open Library</li>
-      <li>Scryfall</li>
-      <li>Open Food Facts</li>
-    </ul>
-  </section>
+    <div class="product">
+      <span class="bin"><b>Duesy</b>Android · iOS<br>personal debts</span>
+      <span>
+        <span class="name">Who owes what, settled.</span>
+        <p>A private, on-device tracker for money lent between people — built
+        for the moment someone calls and you need the number, the history, and
+        the receipts in one place.</p>
+      </span>
+      <span class="status">coming soon · Google Play</span>
+    </div>
 
-  <section class="privacy-band">
-    <div class="wrap">
-      <div class="inner">
-        <h2>No accounts. No analytics. No server.</h2>
-        <p>Everything you enter lives in a local database on your device — we
-        never see it. Data leaves only when you call a source or AI provider
-        yourself, with your own key. Read the full
-        <a href="privacy.html">privacy policy</a>.</p>
-      </div>
+    <div class="product">
+      <span class="bin"><b>MileLog</b>self-hosted<br>mileage</span>
+      <span>
+        <span class="name">Every mile, deducted.</span>
+        <p>A self-hosted, own-your-data mileage tracker: IRS standard-mileage
+        deduction math, trip history with readable place names, fuel economy
+        and per-mile cost. One process, one database file.</p>
+      </span>
+      <span class="status dev">in development</span>
+    </div>
+
+    <div class="product">
+      <span class="bin"><b>Mlinzi</b>mobile<br>safety</span>
+      <span>
+        <span class="name">Help, discreetly.</span>
+        <p>A discreet personal safety app that gets an alert out when you
+        can't openly reach for help.</p>
+      </span>
+      <span class="status dev">in development</span>
+    </div>
+
+    <div class="product">
+      <span class="bin"><b>GoalTracker</b>mobile<br>habits</span>
+      <span>
+        <span class="name">Goals without the noise.</span>
+        <p>A clean, minimalist goal tracker — set it, check in, see the
+        streak. Nothing else.</p>
+      </span>
+      <span class="status dev">in development</span>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Plantburgh LLC</span>
-    <span>
-      <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
-      <a href="terms.html">Terms</a> &nbsp;·&nbsp;
-      <a href="mailto:reihlandre@gmail.com">Contact</a>
-    </span>
+    <span>© 2026 Plantburgh LLC · Pittsburgh, PA</span>
+    <span><a href="mailto:reihlandre@gmail.com">reihlandre@gmail.com</a></span>
   </div>
 </footer>
 
