@@ -1,0 +1,148 @@
+/* Plantburgh Products — light catalog; product pages carry their own look. */
+:root {
+  --paper: #F4F3EF;
+  --card: #FFFFFF;
+  --ink: #14151D;
+  --muted: #5A5B66;
+  --hairline: rgba(20, 21, 29, 0.13);
+  --lavender: #5D4FB8;
+  --lavender-soft: rgba(93, 79, 184, 0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--lavender); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid var(--lavender);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+header { border-bottom: 1px solid var(--hairline); }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.wordmark {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.wordmark span { color: var(--lavender); }
+.nav a.contact { color: var(--muted); font-size: 14px; }
+
+.hero { padding: 72px 0 56px; }
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-weight: 800;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+.hero .sub {
+  margin-top: 20px;
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+/* ---------- the shelf ---------- */
+.shelf { padding: 8px 0 80px; }
+.product {
+  display: grid;
+  grid-template-columns: 128px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 26px 28px;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+a.product:hover {
+  text-decoration: none;
+  border-color: var(--lavender);
+}
+a.product:hover .name { color: var(--lavender); }
+/* bin label: the mono tab that makes the shelf a shelf */
+.bin {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  border-right: 1px solid var(--hairline);
+  padding-right: 24px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bin b { color: var(--ink); font-weight: 500; }
+.product .name {
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+.product p { color: var(--muted); font-size: 15px; max-width: 56ch; }
+.status {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: var(--lavender);
+  background: var(--lavender-soft);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.status.dev { color: var(--muted); background: rgba(20, 21, 29, 0.06); }
+.go { font-size: 14px; color: var(--lavender); white-space: nowrap; }
+
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 28px 0 44px;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+  .product { grid-template-columns: 1fr; gap: 14px; }
+  .bin {
+    border-right: 0;
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 0 12px;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .hero { padding: 48px 0 36px; }
+}
