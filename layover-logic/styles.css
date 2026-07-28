@@ -1,0 +1,263 @@
+/* Layover Logic site — palette lifted from the app itself, so the page and the
+   product read as one thing. Type stays the Plantburgh Archivo + Plex Mono. */
+:root {
+  --bg: #07090c;
+  --panel: #0a0d11;
+  --card: #10141b;
+  --stroke: #2b313c;
+  --hairline: #232831;
+  --text: #e7ecf2;
+  --muted: #93a1b3;
+  /* 0.58 is the floor that keeps 11px labels at WCAG AA (4.5:1) on this
+     background. Anything fainter looks better and fails the check. */
+  --faint: rgba(231, 236, 242, 0.6);
+  --accent: #6ee7b7;
+  --accent-dim: rgba(110, 231, 183, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- header ---------- */
+header { border-bottom: 1px solid var(--hairline); }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.wordmark {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+.wordmark span { color: var(--accent); }
+.nav-links { display: flex; gap: 24px; font-size: 14px; }
+.nav-links a { color: var(--muted); }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+
+/* ---------- hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  padding: 88px 0 96px;
+}
+.hero h1 {
+  font-weight: 800;
+  font-size: clamp(38px, 5.2vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .sub {
+  margin-top: 22px;
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 46ch;
+}
+.stat {
+  margin-top: 26px;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.stat b { color: var(--text); font-weight: 500; }
+
+.chip {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 9px 16px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.chip b { color: var(--accent); font-weight: 500; }
+
+/* The page's only action. Sized for a thumb, not a mouse. */
+.cta {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 14px 26px;
+  min-height: 48px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #05231a;
+  font-weight: 700;
+  font-size: 15.5px;
+  letter-spacing: 0.01em;
+}
+.cta:hover { text-decoration: none; filter: brightness(1.07); }
+.cta-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--faint);
+  max-width: 42ch;
+}
+
+/* ---------- layover strip (signature) ---------- */
+.strip {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 24px 26px 22px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .strip { animation: settle 0.7s cubic-bezier(0.2, 0.8, 0.3, 1) both; }
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+.strip .s-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--faint);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.strip .clock {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  padding: 3px 0;
+}
+.strip .clock .v { color: var(--text); }
+.strip .gap { height: 14px; }
+.strip .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  color: var(--muted);
+}
+.strip .row .amt { color: var(--text); font-variant-numeric: tabular-nums; }
+.strip .rule {
+  border: 0;
+  border-top: 1px dashed var(--stroke);
+  margin: 12px 0;
+}
+.strip .row.free { color: var(--text); font-weight: 500; }
+.strip .row.free .amt { color: var(--accent); }
+.strip .fits {
+  margin-top: 16px;
+  text-align: right;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+/* ---------- sections ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px 56px;
+  padding: 64px 0 80px;
+  border-top: 1px solid var(--hairline);
+}
+.features h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.features p { color: var(--muted); font-size: 15px; max-width: 46ch; }
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 32px 0 48px;
+  color: var(--faint);
+  font-size: 13.5px;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  justify-content: space-between;
+}
+footer a { color: var(--muted); }
+
+/* ---------- legal pages ---------- */
+.doc {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+.doc h1 {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.doc .effective {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12.5px;
+  color: var(--faint);
+  margin-bottom: 40px;
+}
+.doc h2 { font-size: 19px; font-weight: 700; margin: 36px 0 10px; }
+.doc p, .doc li { color: var(--muted); font-size: 15.5px; }
+.doc p { margin-bottom: 14px; }
+.doc ul { padding-left: 22px; margin-bottom: 14px; }
+.doc li { margin-bottom: 8px; }
+.doc strong { color: var(--text); font-weight: 600; }
+
+/* The clause crew actually need to see. Not buried in a list. */
+.doc .callout {
+  border: 1px solid var(--accent);
+  background: var(--accent-dim);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.doc .callout h2 { margin-top: 0; color: var(--text); }
+.doc .callout p:last-child { margin-bottom: 0; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 840px) {
+  .hero { grid-template-columns: 1fr; gap: 44px; padding: 56px 0 64px; }
+  .features { grid-template-columns: 1fr; gap: 32px; padding: 48px 0 64px; }
+  .nav-links { gap: 18px; }
+}
