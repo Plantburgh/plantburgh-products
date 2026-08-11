@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plantburgh Beta — install the apps</title>
+<style>
+  /* Self-contained on purpose: this page gets opened on phones with bad
+     signal at the exact moment someone is trying to install. No CDN. */
+  :root { --ink:#14191A; --muted:#6B7672; --accent:#2C7A69; --card:#fff; --paper:#F6F8F6; --rule:#DDE3DF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#EAF0EC; --muted:#7E8C86; --accent:#54B79C; --card:#161C1A; --paper:#0E1211; --rule:#28322E; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font: 16px/1.55 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 24px 16px 80px; }
+  h1 { font-size: 28px; margin: 12px 0 4px; letter-spacing: -0.02em; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .card { background: var(--card); border:1px solid var(--rule); border-radius: 10px;
+          padding: 14px 16px; margin: 10px 0; }
+  .card h3 { margin: 0 0 2px; font-size: 16.5px; }
+  .card .muted { margin: 0 0 10px; }
+  a.btn { display: inline-block; background: var(--accent); color: #fff; font-weight: 600;
+          padding: 9px 16px; border-radius: 8px; text-decoration: none; font-size: 14.5px; }
+  a.link { color: var(--accent); }
+  ol li { margin-bottom: 8px; }
+  code { background: var(--rule); border-radius: 4px; padding: 1px 5px; font-size: 13.5px; }
+  .tag { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+         color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="tag">Plantburgh · Private beta</p>
+  <h1>Install the apps</h1>
+  <p class="muted">You're a VIP tester — everything is unlocked, free, forever.
+    The one thing we ask back: when something feels broken or slow or confusing,
+    use the <b>Send beta feedback</b> button inside the app (it's in Settings or
+    on the Profile/Help page) and send Andre what it copies.</p>
+
+  <h2>Web apps — nothing to install</h2>
+  <div class="card">
+    <h3>Layover Logic</h3>
+    <p class="muted">Flight-crew layover planner. Works fully offline once opened.</p>
+    <a class="btn" href="https://layover-logic.web.app">Open Layover Logic</a>
+    <p class="muted" style="margin-top:10px">Then use <b>Add to Home Screen</b> when the app
+      suggests it — on iPhone that's what keeps your data safe long-term, and it makes it
+      feel like any other app.</p>
+  </div>
+
+  <h2>Android apps</h2>
+  <p class="muted">These install directly (they're not on the Play Store yet — that's
+    deliberate during beta). Android will warn you about installing outside the store;
+    that warning is about unknown files in general, not these in particular.</p>
+  <ol>
+    <li>On your Android phone, tap an app below and download the <code>.apk</code> file.</li>
+    <li>Open the downloaded file. The first time, Android asks you to allow your browser
+      to install apps: tap <b>Settings → Allow from this source</b>, then go back.</li>
+    <li>Tap <b>Install</b>. If Play Protect asks, choose <b>Install anyway</b> —
+      the warning appears for every app that doesn't come from the store.</li>
+    <li>Updates: install the newer file over the old one the same way — your data stays.</li>
+  </ol>
+
+  <div class="card">
+    <h3>Replicost</h3>
+    <p class="muted">What would it cost to build this again today? Photo-based
+      rebuild estimates. AI photo-identify connects inside the app.</p>
+    <a class="btn" href="https://github.com/Plantburgh/plantburgh-products/releases/latest/download/replicost.apk">Download Replicost</a>
+  </div>
+  <div class="card">
+    <h3>Duesy</h3>
+    <p class="muted">Who owes who — tabs, dues, and debts between friends,
+      settled without awkwardness.</p>
+    <a class="btn" href="https://github.com/Plantburgh/plantburgh-products/releases/latest/download/duesy.apk">Download Duesy</a>
+  </div>
+  <div class="card">
+    <h3>Flipline</h3>
+    <p class="muted">Sourcing-to-sold pipeline for resellers: scan, price,
+      list, ship.</p>
+    <a class="btn" href="https://github.com/Plantburgh/plantburgh-products/releases/latest/download/flipline.apk">Download Flipline</a>
+  </div>
+  <div class="card">
+    <h3>GoalTracker</h3>
+    <p class="muted">A clean, minimalist goal tracker.</p>
+    <a class="btn" href="https://github.com/Plantburgh/plantburgh-products/releases/latest/download/goaltracker.apk">Download GoalTracker</a>
+  </div>
+  <div class="card">
+    <h3>Drift</h3>
+    <p class="muted">link · chain · burst — a colour-matching arcade game.</p>
+    <a class="btn" href="https://github.com/Plantburgh/plantburgh-products/releases/latest/download/drift.apk">Download Drift</a>
+  </div>
+
+  <h2>Automatic updates (optional, recommended)</h2>
+  <div class="card">
+    <p class="muted" style="margin:0">Install
+      <a class="link" href="https://github.com/ImranR98/Obtainium/releases/latest">Obtainium</a>
+      (free, open source), tap ➕, and paste
+      <code>https://github.com/Plantburgh/plantburgh-products</code>.
+      It watches our releases and updates every app in place — you never do the
+      download dance again.</p>
+  </div>
+
+  <h2>AI features</h2>
+  <p class="muted">Replicost's photo-identify (and future AI features) run through our own
+    server — no keys, no accounts, no cost to you. Andre gives you a personal invite code;
+    paste it where the app asks. If you ever see "daily limit", that's the safety ceiling
+    doing its job — tell us and we'll raise yours.</p>
+
+  <p class="muted" style="margin-top:36px">Something broken? The in-app
+    <b>Send beta feedback</b> button is the fastest path. Thank you for testing. 🌱</p>
+</div>
+</body>
+</html>
