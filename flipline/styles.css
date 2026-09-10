@@ -197,6 +197,12 @@ header {
   flex-wrap: wrap;
   gap: 10px;
 }
+.source-note {
+  margin-top: 18px;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 13px;
+}
 .source-tags li {
   list-style: none;
   font-family: "IBM Plex Mono", ui-monospace, monospace;

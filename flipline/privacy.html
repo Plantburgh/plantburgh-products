@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Flipline</title>
-<meta name="description" content="Flipline privacy policy: the app collects nothing. All data stays on your device.">
+<meta name="description" content="Flipline privacy policy: no accounts, no analytics, no server. Your records stay on your device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,15 +25,21 @@
 
 <main class="doc">
   <h1>Flipline Privacy Policy</h1>
-  <p class="effective">Effective 2026-07-26</p>
+  <p class="effective">Effective 2026-07-26 · revised 2026-09-10</p>
 
   <p>Flipline is an offline-first reselling companion. This policy is short
   because the app is built not to collect your data.</p>
 
   <h2>What we collect</h2>
-  <p><strong>Nothing.</strong> Flipline has no accounts, no sign-up, no
-  analytics, no ads, no tracking SDKs, and no server operated by us. We (the
-  developer) never see your data.</p>
+  <p><strong>We (the developer) receive nothing.</strong> Flipline has no
+  accounts, no sign-up, no analytics, no ads, no tracking SDKs, and no server
+  operated by us.</p>
+  <p>Google Play counts anything an app sends off the device as "collected",
+  even when it goes straight to a third party. By that definition Flipline
+  collects two things, only when you use the feature that needs them:
+  <strong>photos</strong> you send for identification, and <strong>search
+  terms</strong> (saved hunts, typed searches, barcodes, item titles for a
+  price check). Both are described below.</p>
 
   <h2>Where your data lives</h2>
   <p>Everything you enter — inventory, purchases, sales, expenses, mileage,
@@ -45,12 +51,18 @@
   that calls a third-party service, using credentials you supplied:</p>
   <ul>
     <li><strong>Deal sources and price lookups</strong> (e.g. GSA Auctions,
-    Best Buy, Walmart, Woot, Discogs, Open Library, Open Food Facts,
-    UPCitemdb): your search or refresh sends the query to that service.</li>
+    eBay, CJ, Best Buy, Walmart, Woot, Discogs, Open Library, Open Food Facts,
+    UPCitemdb): your search or refresh sends the query to that service. Your
+    home location is used on the device to filter results and is not
+    sent.</li>
     <li><strong>Photo ID</strong>: when you snap a photo for identification,
     that photo is sent to the AI provider you connected (Google Gemini and/or
     Anthropic Claude) under <strong>your own API key</strong> and their terms.
-    Photos are never sent automatically.</li>
+    Photos are never sent automatically. On the <strong>free tier of the
+    Gemini API</strong>, Google states it may use submitted content to improve
+    its products, and human reviewers may read it. Anthropic does not train on
+    API content. Use a paid Gemini key, or Claude, if that matters to
+    you.</li>
     <li><strong>Sharing</strong>: backups and CSV exports go wherever you
     share them.</li>
   </ul>
@@ -59,11 +71,14 @@
 
   <h2>Data retention and deletion</h2>
   <p>We retain nothing, so there is nothing for us to delete. To erase all app
-  data, delete the app (or clear its storage). To revoke an AI provider's
+  data, use <strong>More → Erase all data</strong> in the app, or delete the
+  app. To revoke an AI provider's
   access, disconnect it in the app and revoke the key with that provider.</p>
 
   <h2>Children</h2>
-  <p>Flipline is a business tool and is not directed at children under 13.</p>
+  <p>Flipline is a business tool for adults and is not directed at anyone
+  under 18. Its photo identification runs on AI services that require users
+  to be 18 or older.</p>
 
   <h2>Changes</h2>
   <p>If a future version ever changes what leaves the device, this policy and
