@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eBay connected — Flipline</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="../">Flip<span>line</span></a>
+  </div>
+</header>
+<main class="doc">
+  <h1>eBay sign-in accepted</h1>
+  <p id="msg">Sending you back to Flipline…</p>
+  <p><a id="open" href="#">Open Flipline</a></p>
+  <p class="effective">Nothing on this page is stored or sent anywhere. The
+  one-time code in the address bar goes straight into the app on your phone,
+  which trades it for a token that stays on your device.</p>
+</main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var code = q.get('code');
+  var target = 'flipline://ebay' + (code ? '?code=' + encodeURIComponent(code) : '');
+  var a = document.getElementById('open');
+  a.href = target;
+  if (!code) {
+    document.getElementById('msg').textContent =
+      'No code arrived with this page. Go back to Flipline and try again.';
+    return;
+  }
+  location.replace(target);
+})();
+</script>
+</body>
+</html>
