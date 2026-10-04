@@ -25,7 +25,13 @@
 (function () {
   var q = new URLSearchParams(location.search);
   var code = q.get('code');
-  var target = 'flipline://ebay' + (code ? '?code=' + encodeURIComponent(code) : '');
+  // eBay echoes the app's one-time `state` back; the app refuses a code
+  // that arrives without the state it handed out.
+  var state = q.get('state');
+  var target = 'flipline://ebay' + (code
+    ? '?code=' + encodeURIComponent(code) +
+      (state ? '&state=' + encodeURIComponent(state) : '')
+    : '');
   var a = document.getElementById('open');
   a.href = target;
   if (!code) {
