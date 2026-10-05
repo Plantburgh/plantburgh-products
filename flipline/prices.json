@@ -1,0 +1,7 @@
+{
+  "updated": "2026-10-05",
+  "claude-haiku-4-5": {"in": 1.0, "out": 5.0},
+  "gemini-3.8-flash": {"in": 0.75, "out": 3.75},
+  "gemini-3.5-flash": {"in": 1.5, "out": 9.0},
+  "gemini-3.1-flash-lite": {"in": 0.25, "out": 1.5}
+}
