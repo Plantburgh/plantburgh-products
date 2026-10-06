@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Flipline</title>
-<meta name="description" content="Flipline privacy policy: no accounts, no analytics, no server. Your records stay on your device.">
+<meta name="description" content="Flipline privacy policy: no accounts, no analytics of our own. Your records stay on your device; photos leave it only when you send them, without their location.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,55 +25,105 @@
 
 <main class="doc">
   <h1>Flipline Privacy Policy</h1>
-  <p class="effective">Effective 2026-07-26 · revised 2026-09-10</p>
+  <p class="effective">Effective 2026-07-26 · revised 2026-10-05</p>
 
   <p>Flipline is an offline-first reselling companion. This policy is short
   because the app is built not to collect your data.</p>
 
   <h2>What we collect</h2>
-  <p><strong>We (the developer) receive nothing.</strong> Flipline has no
-  accounts, no sign-up, no analytics, no ads, no tracking SDKs, and no server
-  operated by us.</p>
+  <p><strong>We (the developer) receive nothing about you.</strong> Flipline
+  has no accounts, no sign-up, no analytics of our own, and no server that
+  receives your data. The free version shows ads (see <em>Ads and affiliate
+  links</em>).</p>
   <p>Google Play counts anything an app sends off the device as "collected",
   even when it goes straight to a third party. By that definition Flipline
   collects two things, only when you use the feature that needs them:
   <strong>photos</strong> you send for identification, and <strong>search
-  terms</strong> (saved hunts, typed searches, barcodes, item titles for a
-  price check). Both are described below.</p>
+  terms</strong> (saved hunts, typed searches, barcodes, item titles and
+  brands for a price or recall check). Both are described below.</p>
 
   <h2>Where your data lives</h2>
   <p>Everything you enter — inventory, purchases, sales, expenses, mileage,
-  photos, API keys — is stored in a local database <strong>on your device
-  only</strong>. Backups exist only where you choose to share or save them.</p>
+  photos, API keys, AI spending totals — is stored in a local database
+  <strong>on your device only</strong>. Backups exist only where you choose to
+  share or save them.</p>
+
+  <h2>Photos never carry your location</h2>
+  <p>Your phone's camera may tag each photo with where it was taken. Flipline
+  removes those tags (location and the rest of the camera details) from every
+  photo before it leaves your device: to an AI provider, to Google Lens, or to
+  eBay. The copy kept on your device is unchanged.</p>
 
   <h2>What leaves your device</h2>
   <p>Data leaves your device only when <strong>you</strong> trigger an action
   that calls a third-party service, using credentials you supplied:</p>
   <ul>
-    <li><strong>Deal sources and price lookups</strong> (e.g. GSA Auctions,
-    eBay, CJ, Best Buy, Walmart, Woot, Discogs, Open Library, Open Food Facts,
-    UPCitemdb): your search or refresh sends the query to that service. Your
-    home location is used on the device to filter results and is not
-    sent.</li>
-    <li><strong>Photo ID</strong>: when you snap a photo for identification,
-    that photo is sent to the AI provider you connected (Google Gemini and/or
-    Anthropic Claude) under <strong>your own API key</strong> and their terms.
-    Photos are never sent automatically. On the <strong>free tier of the
-    Gemini API</strong>, Google states it may use submitted content to improve
-    its products, and human reviewers may read it. Anthropic does not train on
-    API content. Use a paid Gemini key, or Claude, if that matters to
-    you.</li>
+    <li><strong>Deal sources, price and recall lookups</strong> (e.g. GSA
+    Auctions, eBay, CJ, Best Buy, Walmart, Woot, Meh, Discogs, Scryfall, Open
+    Library, Open Food Facts, UPCitemdb, the U.S. CPSC recall database): your
+    search or refresh sends the query to that service. Your home location is
+    used on the device to filter results and is not sent.</li>
+    <li><strong>Photo ID.</strong> You choose how a photo is identified:
+      <ul>
+        <li><strong>On this phone</strong> (Gemini Nano, where your phone
+        supports it): the photo is read on the device and sent nowhere.</li>
+        <li><strong>Google Lens</strong>: you hand the photo to Google's Lens
+        app yourself, and Google handles it under its own terms. Flipline
+        sends nothing.</li>
+        <li><strong>A cloud AI you connected</strong> (Google Gemini,
+        Anthropic Claude, or OpenRouter) under <strong>your own API
+        key</strong> and that provider's terms. In lot mode, one photo becomes
+        several requests: the whole photo, then close-up crops of it. Photos
+        are never sent automatically.</li>
+        <li><strong>AI off</strong>: More → Scanner money → <em>Use AI to
+        identify photos</em> off. No photo is sent to any AI.</li>
+      </ul>
+      What each cloud provider does with a photo:
+      <ul>
+        <li><strong>Gemini free tier</strong>: Google states it may use
+        submitted content to improve its products, and human reviewers may
+        read it. A paid Gemini key is not used that way.</li>
+        <li><strong>Anthropic Claude</strong>: Anthropic does not train on API
+        content by default.</li>
+        <li><strong>OpenRouter</strong> passes the photo to the company that
+        runs the model you reach. Flipline picks free models, and free models
+        are often run by providers that log requests and may train on them.
+        You can turn that off in your OpenRouter account's privacy
+        settings.</li>
+      </ul>
+    </li>
+    <li><strong>Posting a listing to eBay</strong> (optional, one tap per
+    item): the title, description, price and photos you chose go to eBay under
+    your own eBay sign-in. eBay hosts the photos publicly. Flipline keeps your
+    eBay sign-in token in the device's secure storage and never sees your eBay
+    password.</li>
     <li><strong>Sharing</strong>: backups and CSV exports go wherever you
     share them.</li>
   </ul>
   <p>Each third-party service processes those requests under its own privacy
   policy. Flipline adds no identifiers of its own to any request.</p>
+  <p><strong>Two public files.</strong> To stay current without an update, the
+  app downloads two public files from this website (hosted by GitHub Pages):
+  a list of AI models and a table of AI prices. The request carries nothing
+  about you. Like any website, the host sees your IP address.</p>
+
+  <h2>Ads and affiliate links</h2>
+  <p>The free version of Flipline shows banner ads served by Google AdMob.
+  Google's SDK may collect your device's advertising ID and ad interactions
+  under Google's privacy policy; you can reset or delete the advertising ID in
+  Android settings, and a consent prompt is shown where your state's law
+  requires one. Ads never see your inventory, prices, photos, or keys — those
+  never leave the local database.</p>
+  <p>Some links to marketplaces are affiliate links. When one can earn us a
+  commission, the app says so next to the link. It costs you nothing extra and
+  changes nothing about the price you pay.</p>
 
   <h2>Data retention and deletion</h2>
   <p>We retain nothing, so there is nothing for us to delete. To erase all app
   data, use <strong>More → Erase all data</strong> in the app, or delete the
-  app. To revoke an AI provider's
-  access, disconnect it in the app and revoke the key with that provider.</p>
+  app. Photos and searches already sent to an AI or search provider are that
+  provider's to delete. To revoke an AI provider's access, disconnect it in
+  the app and revoke the key with that provider.</p>
 
   <h2>Children</h2>
   <p>Flipline is a business tool for adults and is not directed at anyone
