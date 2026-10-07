@@ -46,7 +46,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  /* Top and bottom only: a shorthand here wiped .wrap's side gutter,
+     so the header touched the screen edges on a phone. */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .wordmark {
   font-weight: 800;
@@ -287,4 +292,9 @@ footer a { color: var(--muted); }
   .hero { grid-template-columns: 1fr; gap: 48px; padding: 56px 0 64px; }
   .features { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
   .privacy-band .inner { padding: 32px 26px; }
+}
+@media (max-width: 480px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .nav-links { gap: 16px; }
+  .doc { padding-left: 16px; padding-right: 16px; }
 }
