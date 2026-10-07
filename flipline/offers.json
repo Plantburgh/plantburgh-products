@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "offers": [
+    {
+      "id": "milepal",
+      "kind": "house",
+      "title": "MilePal",
+      "advertiser": "Plantburgh Products",
+      "note": "Mileage log for your sourcing runs",
+      "url": "https://demos.plantburghproducts.com/milepal/"
+    },
     {
       "id": "abra-masks",
       "title": "Halloween masks",
@@ -10,12 +18,52 @@
       "ends": "2026-11-01"
     },
     {
+      "id": "plantburgh-care",
+      "kind": "house",
+      "title": "Plant care in Pittsburgh",
+      "advertiser": "Plantburgh",
+      "note": "Indoor plant care and maintenance",
+      "url": "https://plantburgh.com/"
+    },
+    {
       "id": "abra-costumes",
       "title": "Costumes",
       "advertiser": "Abracadabra NYC",
       "note": "Full costumes and accessories",
       "url": "https://www.kqzyfj.com/click-101898372-17267156-1778559079000",
       "ends": "2026-11-01"
+    },
+    {
+      "id": "pb-apps",
+      "kind": "house",
+      "title": "More apps from us",
+      "advertiser": "Plantburgh Products",
+      "note": "MilePal, Giganize, Replicost and more",
+      "url": "https://plantburghproducts.com/apps"
+    },
+    {
+      "id": "replicost",
+      "kind": "house",
+      "title": "Replicost",
+      "advertiser": "Plantburgh Products",
+      "note": "Job cost estimates",
+      "url": "https://demos.plantburghproducts.com/replicost/"
+    },
+    {
+      "id": "giganize",
+      "kind": "house",
+      "title": "Giganize",
+      "advertiser": "Plantburgh Products",
+      "note": "Run your gigs and crew",
+      "url": "https://giganize.web.app/"
+    },
+    {
+      "id": "light-meter",
+      "kind": "house",
+      "title": "Light Meter",
+      "advertiser": "Plantburgh Products",
+      "note": "Measure the light your plants get",
+      "url": "https://demos.plantburghproducts.com/light-meter/"
     },
     {
       "id": "abra-collectibles",
