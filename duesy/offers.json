@@ -1,0 +1,126 @@
+{
+  "updated": "2026-10-08",
+  "offers": [
+    {
+      "id": "plantburgh-care",
+      "kind": "house",
+      "title": "Plant care in Pittsburgh",
+      "title_es": "Cuidado de plantas en Pittsburgh",
+      "advertiser": "Plantburgh",
+      "note": "Indoor plant care and maintenance",
+      "note_es": "Cuidado y mantenimiento de plantas de interior",
+      "url": "https://plantburgh.com/"
+    },
+    {
+      "id": "flipline",
+      "kind": "house",
+      "title": "Flipline",
+      "advertiser": "Plantburgh Products",
+      "note": "Price and list what you resell",
+      "note_es": "Pon precio y publica lo que revendes",
+      "url": "https://demos.plantburghproducts.com/flipline/"
+    },
+    {
+      "id": "abra-masks",
+      "title": "Halloween masks",
+      "title_es": "Máscaras de Halloween",
+      "advertiser": "Abracadabra NYC",
+      "note": "Masks for the season",
+      "note_es": "Máscaras para la temporada",
+      "url": "https://www.kqzyfj.com/click-101898372-17267167-1778559079000",
+      "ends": "2026-11-01"
+    },
+    {
+      "id": "giganize",
+      "kind": "house",
+      "title": "Giganize",
+      "advertiser": "Plantburgh Products",
+      "note": "Run your gigs and crew",
+      "note_es": "Organiza tus trabajos y tu equipo",
+      "url": "https://giganize.web.app/"
+    },
+    {
+      "id": "milepal",
+      "kind": "house",
+      "title": "MilePal",
+      "advertiser": "Plantburgh Products",
+      "note": "Log every business mile",
+      "note_es": "Registra cada milla de trabajo",
+      "url": "https://demos.plantburghproducts.com/milepal/"
+    },
+    {
+      "id": "abra-costumes",
+      "title": "Costumes",
+      "title_es": "Disfraces",
+      "advertiser": "Abracadabra NYC",
+      "note": "Full costumes and accessories",
+      "note_es": "Disfraces completos y accesorios",
+      "url": "https://www.kqzyfj.com/click-101898372-17267156-1778559079000",
+      "ends": "2026-11-01"
+    },
+    {
+      "id": "layover-logic",
+      "kind": "house",
+      "title": "Layover Logic",
+      "advertiser": "Plantburgh Products",
+      "note": "Make the most of a layover",
+      "note_es": "Aprovecha al máximo tu escala",
+      "url": "https://demos.plantburghproducts.com/layover-logic/"
+    },
+    {
+      "id": "replicost",
+      "kind": "house",
+      "title": "Replicost",
+      "advertiser": "Plantburgh Products",
+      "note": "Job cost estimates",
+      "note_es": "Presupuestos de trabajos",
+      "url": "https://demos.plantburghproducts.com/replicost/"
+    },
+    {
+      "id": "abra-magic",
+      "title": "Magic tricks",
+      "title_es": "Trucos de magia",
+      "advertiser": "Abracadabra NYC",
+      "note": "Tricks and magic kits",
+      "note_es": "Trucos y kits de magia",
+      "url": "https://www.jdoqocy.com/click-101898372-17267165-1778559079000"
+    },
+    {
+      "id": "light-meter",
+      "kind": "house",
+      "title": "Light Meter",
+      "advertiser": "Plantburgh Products",
+      "note": "Measure the light your plants get",
+      "note_es": "Mide la luz que reciben tus plantas",
+      "url": "https://demos.plantburghproducts.com/light-meter/"
+    },
+    {
+      "id": "abra-props",
+      "title": "Props",
+      "title_es": "Utilería",
+      "advertiser": "Abracadabra NYC",
+      "note": "Stage and party props",
+      "note_es": "Utilería para escenario y fiestas",
+      "url": "https://www.tkqlhce.com/click-101898372-17267169-1778559078000"
+    },
+    {
+      "id": "pb-apps",
+      "kind": "house",
+      "title": "More apps from us",
+      "title_es": "Más apps nuestras",
+      "advertiser": "Plantburgh Products",
+      "note": "Flipline, Giganize, Replicost and more",
+      "note_es": "Flipline, Giganize, Replicost y más",
+      "url": "https://plantburghproducts.com/apps"
+    },
+    {
+      "id": "abra-collectibles",
+      "title": "Collectibles",
+      "title_es": "Coleccionables",
+      "advertiser": "Abracadabra NYC",
+      "note": "Collectible figures and pieces",
+      "note_es": "Figuras y piezas de colección",
+      "url": "https://www.anrdoezrs.net/click-101898372-17267159-1778559079000"
+    }
+  ]
+}
