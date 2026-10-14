@@ -1,0 +1,30 @@
+/* Tester docs. Self-contained on purpose (no web fonts, no CDN):
+   these pages get opened on phones with bad signal mid-install. */
+:root { --ink:#14191A; --muted:#5E6965; --accent:#2C7A69; --card:#fff; --paper:#F6F8F6; --rule:#DDE3DF; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --ink:#EAF0EC; --muted:#93A19B; --accent:#5CC0A4; --card:#161C1A; --paper:#0E1211; --rule:#28322E; }
+}
+:root[data-theme="dark"] { --ink:#EAF0EC; --muted:#93A19B; --accent:#5CC0A4; --card:#161C1A; --paper:#0E1211; --rule:#28322E; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink);
+       font: 16px/1.6 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 20px 16px 72px; }
+.top { display:flex; flex-wrap:wrap; gap:6px 16px; align-items:center; font-size:14px; margin-bottom:8px; }
+.top .tag { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-right:auto; }
+a { color: var(--accent); }
+h1 { font-size: 27px; line-height:1.2; margin: 14px 0 4px; letter-spacing: -0.02em; }
+h2 { font-size: 18px; margin: 30px 0 6px; }
+.muted { color: var(--muted); font-size: 14px; }
+.short { background:var(--card); border:1px solid var(--rule); border-left:4px solid var(--accent);
+         border-radius:10px; padding:14px 16px; margin:18px 0; }
+.short p { margin:0; }
+.card { background: var(--card); border:1px solid var(--rule); border-radius: 10px; padding: 14px 16px; margin: 10px 0; }
+.card h3 { margin: 0 0 2px; font-size: 16.5px; }
+.card p { margin: 0 0 10px; }
+a.btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; padding:9px 16px;
+        border-radius:8px; text-decoration:none; font-size:14.5px; margin-right:8px; }
+a.btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+ol li, ul li { margin-bottom: 8px; }
+dl { margin: 0; } dt { font-weight: 600; } dd { margin: 0 0 10px; color: var(--muted); }
+code { background: var(--rule); border-radius: 4px; padding: 1px 5px; font-size: 13.5px; word-break: break-all; }
+footer { margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13.5px; }
