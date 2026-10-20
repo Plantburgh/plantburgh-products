@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Duesy</title>
-<meta name="description" content="Duesy privacy policy: no accounts, no server of ours. Your ledger, contacts and calls stay on your device; the only copy that leaves is encrypted. The free version shows ads.">
+<meta name="description" content="Duesy privacy policy: no accounts, and no server of ours ever sees your ledger. Your ledger, contacts and calls stay on your device; the only copy that leaves is encrypted. The free version shows ads.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,11 +25,12 @@
 
 <main class="doc">
   <h1>Duesy Privacy Policy</h1>
-  <p class="effective">Effective 2026-10-08 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
+  <p class="effective">Effective 2026-10-16 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
   <p><a href="es/privacy.html">Español</a></p>
 
   <p><strong>The short version: we collect nothing about your ledger.</strong>
-  There is no account and no server operated by us. Everything you enter
+  There is no account, and your ledger never reaches a server of ours (the
+  only thing Duesy fetches from us is the list of banners). Everything you enter
   stays on your phone, and the only copy that ever leaves it is encrypted
   with a key we never have. We (the developer) cannot see your ledger, your
   contacts, your calls, or your phone number. The free version shows ads
@@ -93,10 +94,24 @@
   <a href="https://policies.google.com/technologies/ads">how Google uses data
   in ads</a>. Other banners are our own: links to Plantburgh services and apps,
   and affiliate offers marked "Sponsored", which may earn us a commission if
-  you buy. To show those, Duesy downloads a public list of offers once a day;
-  that request carries nothing about you. Ads never see your ledger, names,
+  you buy. To show those, Duesy downloads a public list of banners from our
+  server every few hours; that request carries nothing about you. When you
+  tap one of our banners, the link passes through our server, which adds one
+  to that banner's daily tap count (no IP address or device id is kept) and
+  sends you on. Ads never see your ledger, names,
   amounts, contacts or calls. Pro, trial and the ad-free state make no ad
   requests at all.</p>
+
+  <h2>Assistants and links (off unless you turn them on)</h2>
+  <p>In Settings you can turn on "Let assistants read my balances". While it
+  is on, Duesy keeps a short summary of who owes whom in its private storage
+  on your phone, and assistants you have allowed on that phone (such as Gemini
+  on Android) can read it when you ask them. Duesy never sends it anywhere and
+  deletes it when you turn the setting off. Assistants, other apps and
+  duesy:// links can only open Duesy on a filled-in screen: nothing is added,
+  settled, deleted or sent until you tap it. If you add your Cash App, Venmo
+  or PayPal.me name under "Your pay links", it stays on your phone and goes
+  only into reminder texts you choose to send.</p>
 
   <h2>Importing</h2>
   <p>If you import a Splitwise export or a spreadsheet, the file is read on
@@ -106,7 +121,7 @@
   <p>You can also export a backup yourself; it is encrypted with a
   passphrase only you know and goes wherever you choose to share it. Sync
   updates and signed statements travel directly from you to your friend
-  through apps you pick (Messages, QR, etc.) — no server of ours is
+  through apps you pick (Messages, QR, etc.); no server of ours is
   involved, and we never receive a copy.</p>
 
   <h2>Purchases</h2>
