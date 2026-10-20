@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Duesy</title>
-<meta name="description" content="Duesy privacy policy: no accounts, no server, no analytics. Your ledger, contacts, and call activity never leave your device.">
+<meta name="description" content="Duesy privacy policy: no accounts, no server of ours. Your ledger, contacts and calls stay on your device; the only copy that leaves is encrypted. The free version shows ads.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,12 +25,15 @@
 
 <main class="doc">
   <h1>Duesy Privacy Policy</h1>
-  <p class="effective">Effective 2026-07-27 · Plantburgh LLC</p>
+  <p class="effective">Effective 2026-10-08 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
+  <p><a href="es/privacy.html">Español</a></p>
 
-  <p><strong>The short version: Duesy collects nothing.</strong> There is no
-  account, no server operated by us, no analytics, no ads, and no tracking
-  SDKs. Everything you enter stays on your phone. We (the developer) cannot
-  see your ledger, your contacts, your calls, or your phone number.</p>
+  <p><strong>The short version: we collect nothing about your ledger.</strong>
+  There is no account and no server operated by us. Everything you enter
+  stays on your phone, and the only copy that ever leaves it is encrypted
+  with a key we never have. We (the developer) cannot see your ledger, your
+  contacts, your calls, or your phone number. The free version shows ads
+  from Google AdMob, described below; Duesy Pro shows none.</p>
 
   <h2>Data stored on your device</h2>
   <p>Your ledger — people, debts, settlements, notes, limits, phone numbers,
@@ -71,9 +74,37 @@
   you tap. If you share a payment confirmation <em>into</em> Duesy, it is
   parsed on the device and saved only if you confirm it.</p>
 
+  <h2>Automatic backup</h2>
+  <p>Unless you turn it off, Duesy saves an encrypted copy of your ledger
+  (and photos you attached) into the part of the app that Android's own
+  backup carries to your Google account. The copy is AES-256 encrypted with a
+  random key that Duesy stores in Google Block Store, and only when Block
+  Store is end-to-end encrypted (your phone has a screen lock). Neither
+  Google nor we can read it; on a new phone set up with the same Google
+  account, Duesy can open it and offer it back. On iPhone the key uses
+  iCloud Keychain. Nothing else in the app is included in device backups.</p>
+
+  <h2>Ads (free version only)</h2>
+  <p>If you use Duesy without Pro after the trial, a small banner appears on
+  the home screen and on a person's tab. Some banners come from Google AdMob,
+  which may collect your device's advertising ID, basic device information,
+  and ad interactions, and may personalise ads where you consent (Google's
+  consent form appears the first time). See
+  <a href="https://policies.google.com/technologies/ads">how Google uses data
+  in ads</a>. Other banners are our own: links to Plantburgh services and apps,
+  and affiliate offers marked "Sponsored", which may earn us a commission if
+  you buy. To show those, Duesy downloads a public list of offers once a day;
+  that request carries nothing about you. Ads never see your ledger, names,
+  amounts, contacts or calls. Pro, trial and the ad-free state make no ad
+  requests at all.</p>
+
+  <h2>Importing</h2>
+  <p>If you import a Splitwise export or a spreadsheet, the file is read on
+  your phone and only the rows you confirm are saved. It is never uploaded.</p>
+
   <h2>Backups and sharing with friends</h2>
-  <p>Backups exist only when you export one; they are encrypted with a
-  passphrase only you know and go wherever you choose to share them. Sync
+  <p>You can also export a backup yourself; it is encrypted with a
+  passphrase only you know and goes wherever you choose to share it. Sync
   updates and signed statements travel directly from you to your friend
   through apps you pick (Messages, QR, etc.) — no server of ours is
   involved, and we never receive a copy.</p>
@@ -85,26 +116,28 @@
 
   <h2>Data retention and deletion</h2>
   <p>We retain nothing, so there is nothing for us to delete. To erase all
-  app data, delete the app (or clear its storage). Backups you exported are
-  yours to delete wherever you saved them.</p>
+  app data, delete the app (or clear its storage). The automatic backup lives
+  in your Google account's device backup, which you can delete in your
+  Google account settings; turning automatic backup off in Duesy stops new
+  copies. Backups you exported are yours to delete wherever you saved them.
+  AdMob data is governed by Google's policies and your Android ad settings
+  (Settings, Google, Ads).</p>
 
   <h2>Children</h2>
-  <p>Duesy is not directed at children under 13 and collects no data from
-  anyone.</p>
+  <p>Duesy is not directed at children under 13.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes, the updated version is posted at this address
   with a new effective date, and the app tells you what changed after an
-  update. Since Duesy collects nothing, changes would only ever describe new
-  on-device features.</p>
+  update.</p>
 
   <h2>Contact</h2>
-  <p>Plantburgh LLC — <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></p>
+  <p>Plantburgh Products LLC: <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></p>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Plantburgh LLC</span>
+    <span>© 2026 Plantburgh Products LLC</span>
     <span>
       <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
       <a href="terms.html">Terms</a> &nbsp;·&nbsp;
