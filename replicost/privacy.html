@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Replicost: Privacy Policy</title>
+<link rel="stylesheet" href="../docs.css">
+</head>
+<body>
+<div class="wrap">
+<div class="top"><span class="tag">Plantburgh Products</span><a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a> <a href="delete.html">Delete your data</a></div>
+<h1>Replicost: Privacy Policy</h1>
+<p class="muted">Last updated: 2026-10-20 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
+
+<p><b>Last updated: 20 October 2026</b></p>
+<p>Replicost is made by Plantburgh Products LLC, a Pennsylvania limited liability company.</p>
+<p>This policy is short because the app is simple: <b>we do not run a server, and we do not collect anything.</b> There is no account to create, no analytics, and no tracking by us. The version installed from an app store shows ads from Google (see "Advertising" below). Everything the app computes, it computes on your device, and everything it remembers, it remembers on your device.</p>
+<p>There is exactly one way data leaves your phone, and you have to turn it on yourself. That is photo identification, and it is described in full below.</p>
+<h2>What stays on your device</h2>
+<p>All of it, unless you connect a Gemini key:</p>
+<ul><li>Saved estimates, projects, and their ledgers</li><li>Your shop profile — metro, state, hourly rate, tools, skills, municipality</li><li>Anything you have reported: actual costs, quotes you were given, notes on a line</li><li>Your Gemini API key, held in the device keychain</li><li>The daily identification counter</li></ul>
+<p>None of this is transmitted to us. We have nowhere to transmit it to.</p>
+<h2>Photo identification sends your photo to Google</h2>
+<p>When you connect a Google Gemini API key and identify something by photograph, the photograph is sent to <code>generativelanguage.googleapis.com</code> <b>using your own key, under your own Google account.</b></p>
+<p>Three things follow, and we would rather you know all three before you take the first picture:</p>
+<ol><li><b>The photo leaves your device.</b> It goes to Google, not to us. We never receive it, store it, or see it.</li><li><b>Your agreement about that photo is with Google, not with us.</b> What Google does with it is governed by the Gemini API terms you accepted when you created the key.</li><li><b>On Google's free tier, Google may use what you send to improve their products, and human reviewers may read it.</b> Google's paid tier does not work this way. Most people using Replicost will be on the free tier, because that is what our setup flow points at.</li></ol>
+<p>We will not describe photo identification as private, confidential, or on-device, because none of those would be true.</p>
+<p><b>Location is stripped before the photo is sent.</b> Replicost removes the EXIF and IPTC metadata blocks — which is where GPS coordinates, timestamps, and device identifiers live — from every image before it goes to Google. This happens for photos you take, photos you choose from your library, photos shared into the app from elsewhere, and receipt photos alike.</p>
+<p>The model is asked to describe what it sees. It never sets a price. Every number in Replicost comes from our own cost data, computed on your device.</p>
+<h2>Camera and photo library permissions</h2>
+<p>The app asks for camera access to photograph a subject, and photo library access to choose an existing picture. Both are used for identification and nothing else. Decline either and the rest of the app works normally — typing what you want priced needs no permissions at all.</p>
+<h2>Deleting your data</h2>
+<p><b>You · Erase everything on this device</b> removes every saved estimate, project, ledger, report, quote observation, note, your shop profile, and your stored Gemini key. It cannot be undone.</p>
+<p>Because nothing was ever on a server, there is no backup on a server either. The only copy that can survive an erase or a lost device is a backup file you save yourself: <b>You · Back up or restore</b> writes your saved estimates, projects, ledgers, reports, quote observations, and shop profile into one JSON file and hands it to the share sheet. Where it goes next — your email, your cloud drive, a computer — is your choice and under that service's terms, not ours; we never see it. The file never contains your Gemini key. Restoring reads such a file back in, and only from a file you pick.</p>
+<p>One thing survives: a redeemed access code, if you have one. That is a grant of access rather than data about you, and it cannot be re-issued if destroyed.</p>
+<p>To delete photos you have already sent to Google, use your Google account — we cannot reach them.</p>
+<h2>Children</h2>
+<p>Replicost is not directed to children under 13 and we do not knowingly collect anything from anyone, of any age.</p>
+<h2>What the store forms say</h2>
+<p>For clarity, these are the answers we give on Apple's privacy nutrition labels and Google Play's Data Safety form, and they follow from everything above:</p>
+<ul><li><b>Data collected by us:</b> none.</li><li><b>Data shared with third parties:</b> photographs, to Google, only when you have</li></ul>
+<p>connected your own API key and only at the moment you identify something. Optional, user-initiated, and never for advertising.</p>
+<ul><li><b>Data stored on device:</b> estimates, profile, reports, API key.</li><li><b>Tracking:</b> none by us. In the store version only, Google's Mobile Ads SDK collects the advertising ID and device signals for ads (see below).</li></ul>
+<h2>Changes</h2>
+<p>If this policy changes materially, the app will show the new version on next launch. The date at the top always reflects the current text.</p>
+<h2>Contact</h2>
+<p>contact@plantburgh.com</p>
+<h2>Advertising — the store version only</h2>
+<p>The version of Replicost installed from an app store shows advertising. It is the only version that does; a personal or sideloaded build shows none and makes none of the requests described here.</p>
+<p>Ads are served by Google's Mobile Ads SDK. To do that, the SDK collects the device's advertising identifier and device signals (model, operating system, IP address, approximate location derived from it, and interaction with the ad) and sends them to Google under Google's privacy policy. We do not receive this data. Where the law requires it, you are asked for consent before the first ad request, and you can change that choice from the same prompt later.</p>
+<p>Ads appear beside the app's screens and never inside an estimate, an export, or a shared record. Nothing you type, photograph, save, or report is used to target them.</p>
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a>.</p>
+<footer>Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC · <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></footer>
+</div>
+</body>
+</html>

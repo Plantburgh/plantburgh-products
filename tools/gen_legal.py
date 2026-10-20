@@ -112,7 +112,7 @@ APPS = {
             ("Purchases", "Premium is billed by Google Play. Google tells our server which plan your account has. We never see your payment details."),
             ("Notifications", "Care reminders are scheduled on the phone."),
             ("Sharing", "We do not sell your data. We share it only with the services above that run the app (Google Firebase and Cloud, Anthropic, Google AdMob and Google Play) or when the law requires it."),
-            ("Keeping and deleting", "We keep your data until you delete your account. See the account deletion page linked at the bottom for how to delete your account and everything stored under it."),
+            ("Keeping and deleting", "We keep your data until you delete your account. Delete it any time in the app (More › Delete account), which erases everything stored under it right away, or follow the account deletion page linked at the top."),
             ("Children", "Plantburgh Plant Id is not directed at children under 13."),
         ],
         terms=lambda: [
@@ -124,7 +124,7 @@ APPS = {
             ("The app", "The app is provided as is by Plantburgh Products LLC. To the extent the law allows, we are not liable for indirect or consequential losses."),
             ("Contact", f"Questions: {MAIL}."),
         ],
-        delete="<b>To delete your account and all its data</b> (garden, reminders, scan history, photos and plan), email <a href=\"mailto:contact@plantburgh.com?subject=Delete%20my%20Plant%20Id%20account\">contact@plantburgh.com</a> with the subject <i>Delete my Plant Id account</i> from the email address on the account. If you only use the app as a guest, include the account code shown in the app's More tab. We delete the account and everything stored under it within 30 days and reply to confirm. Scan counts kept for fraud and billing checks are deleted at the same time. A Google Play subscription is not cancelled by deleting the account; cancel it in Google Play first.",
+        delete="<b>In the app:</b> open <b>More › Delete account</b> (or <b>Settings › Delete account</b>) and confirm. That deletes your account and everything stored under it right away: garden, notes, reminders, scan history, scan photos, usage counts and advisor threads. A Google Play subscription is not cancelled by deleting the account; cancel it in Google Play first.</p><p><b>Without the app:</b> email <a href=\"mailto:contact@plantburgh.com?subject=Delete%20my%20Plant%20Id%20account\">contact@plantburgh.com</a> with the subject <i>Delete my Plant Id account</i> from the email address on the account. If you only use the app as a guest, include the account code shown in the app's More tab. We delete the account and everything stored under it within 30 days and reply to confirm. Scan counts kept for fraud and billing checks are deleted at the same time.",
     ),
 }
 
@@ -174,3 +174,90 @@ for slug, a in APPS.items():
     write(slug, "Privacy Policy", a["privacy"](), short=short)
     write(slug, "Terms of Use", a["terms"]())
     write(slug, "Delete Your Data", raw=f"<p>{a['delete']}</p>")
+
+
+# ---------------------------------------------------------------------------
+# Replicost: published straight from the app's own Markdown (app/assets/legal).
+RC_LEGAL = pathlib.Path("/Users/user11/Developer/Replicost-sourced/app/assets/legal")
+
+
+def md_to_html(md):
+    """Small Markdown subset: #/## headings, paragraphs, - and 1. lists, **bold**, `code`."""
+    inline = lambda t: re.sub(r"`([^`]+)`", r"<code>\1</code>",
+                              re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(t, quote=False)))
+    out, para, lst = [], [], None
+
+    def flush():
+        nonlocal para, lst
+        if para:
+            out.append("<p>" + inline(" ".join(para)) + "</p>"); para = []
+        if lst:
+            tag, items = lst
+            out.append(f"<{tag}>" + "".join(f"<li>{inline(i)}</li>" for i in items) + f"</{tag}>"); lst = None
+
+    for line in md.splitlines():
+        s = line.strip()
+        if not s:
+            flush(); continue
+        if s.startswith("# "):
+            flush(); continue  # page title comes from the template
+        if s.startswith("## "):
+            flush(); out.append("<h2>" + inline(s[3:]) + "</h2>"); continue
+        m = re.match(r"^(-|\d+\.)\s+(.*)", s)
+        if m:
+            if para:
+                out.append("<p>" + inline(" ".join(para)) + "</p>"); para = []
+            tag = "ul" if m.group(1) == "-" else "ol"
+            if not lst or lst[0] != tag:
+                if lst: flush()
+                lst = (tag, [])
+            lst[1].append(m.group(2)); continue
+        if lst and line.startswith("   "):
+            lst[1][-1] += " " + s; continue
+        if lst: flush()
+        para.append(s)
+    flush()
+    return "\n".join(out)
+
+
+APPS["replicost"] = dict(name="Replicost", updated="2026-10-20",
+                         short="", privacy=lambda: [], terms=lambda: [],
+                         delete="Open Replicost and choose <b>You › Erase everything on this device</b>. That removes every saved estimate, project, ledger, report, note, your shop profile and your stored Gemini key. Nothing is kept on a server. Photos you identified were sent to Google under your own key; delete them from your Google account.")
+for kind, fname in (("Privacy Policy", "privacy.md"), ("Terms of Use", "terms.md")):
+    write("replicost", kind, raw=md_to_html((RC_LEGAL / fname).read_text()))
+write("replicost", "Delete Your Data", raw=f"<p>{APPS['replicost']['delete']}</p>")
+
+# ---------------------------------------------------------------------------
+# Light Meter Spanish pages (the app links /light-meter/es/privacy.html and terms.html).
+CO_ES = "Plantburgh Products LLC, una empresa de Pensilvania propiedad de Plantburgh LLC"
+LM_ES_PRIV = [
+    ("Quiénes somos", f"Plantburgh Light Meter es creado por {CO_ES}. Preguntas: {MAIL}."),
+    ("Qué guarda la app", "Tus lecturas de luz, lugares, fotos de lugares, revisiones de plantas, proyectos de clientes, recordatorios de cuidado y ajustes. Se guardan solo en este teléfono, en el almacenamiento privado de la app. No hay cuenta y nunca los recibimos."),
+    ("Ubicación (opcional)", "Si permites la ubicación, la app la usa solo cuando agregas un lugar o un proyecto, para escribir la dirección en el teléfono. Tu ubicación no se nos envía ni se rastrea en segundo plano."),
+    ("Cámara y fotos", "Las fotos de lugares que tomas o eliges se guardan dentro de la app en este teléfono."),
+    ("Internet", "La app no se conecta a internet por sí sola. Los enlaces a nuestro sitio, a Play o a los términos se abren en tu navegador."),
+    ("Anuncios y compras", "Esta versión muestra solo nuestras propias tarjetas sin conexión y ningún anuncio de terceros. Si una versión futura agrega anuncios o una mejora de pago, esta página se actualizará antes de publicar esa versión. Cualquier compra la gestiona Google Play; nunca vemos tus datos de pago."),
+    ("Notificaciones", "Los recordatorios de riego y cuidado se programan en el teléfono. No se nos envía nada."),
+    ("Asistente del teléfono (opcional)", "Si activas la función de asistente, un asistente de tu teléfono puede leer las lecturas que le pidas. Lo que haga con ellas se rige por la política de privacidad de ese asistente."),
+    ("Compartir y copias de seguridad", "Los datos salen del teléfono solo cuando compartes un informe PDF, exportas un archivo o guardas una copia de seguridad, y tú eliges a dónde van. Si la copia de seguridad de Android está activada, Android puede incluir los datos de la app en la copia de tu propia cuenta de Google."),
+    ("Borrar", "Ajustes › Borrar todos mis datos elimina todo lo que la app guardó en este teléfono. Desinstalar la app también lo elimina."),
+    ("Niños", "La app no está dirigida a menores de 13 años."),
+]
+LM_ES_TERMS = [
+    ("Las lecturas son estimaciones", "Los sensores de luz de los teléfonos varían según el modelo y no son instrumentos de laboratorio. Las lecturas y sugerencias de plantas son una guía, no una garantía de cómo le irá a una planta."),
+    ("Seguridad de las plantas", "Las notas sobre mascotas y toxicidad son una guía general basada en fuentes publicadas. Si una persona o una mascota come una planta, llama a un médico, a un veterinario o al centro de toxicología."),
+    ("La app", "La app se ofrece tal cual por Plantburgh Products LLC. Trabajamos para que sea precisa, pero no podemos prometer que no tenga errores. En la medida que la ley lo permita, no somos responsables de pérdidas indirectas o consecuentes."),
+    ("Contacto", f"Preguntas: {MAIL}."),
+]
+PAGE_ES = (PAGE.replace('lang="en"', 'lang="es"').replace("../docs.css", "../../docs.css")
+           .replace(">Privacy<", ">Privacidad<").replace(">Terms<", ">Términos<")
+           .replace('<a href="delete.html">Delete your data</a>', '<a href="../delete.html">Borrar tus datos</a> <a href="../privacy.html">English</a>')
+           .replace("Last updated:", "Última actualización:").replace("<h2>Contact</h2>", "<h2>Contacto</h2>")
+           .replace("<p>Questions:", "<p>Preguntas:"))
+for kind, secs, fname in (("Política de privacidad", LM_ES_PRIV, "privacy.html"), ("Términos de uso", LM_ES_TERMS, "terms.html")):
+    body = "\n".join(f"<h2>{esc(t)}</h2>\n<p>{esc(b)}</p>" for t, b in secs)
+    short = ('<div class="short"><p><b>En resumen:</b> Las lecturas, lugares, fotos y proyectos se quedan en tu teléfono. '
+             'No hay cuenta, la app no hace solicitudes a internet por sí sola y no muestra anuncios de terceros.</p></div>') if fname == "privacy.html" else ""
+    out = PAGE_ES.format(name="Plantburgh Light Meter", kind=kind, updated="2026-10-20", co=CO_ES, mail=MAIL, short=short, body=body)
+    p = ROOT / "light-meter" / "es" / fname
+    p.parent.mkdir(exist_ok=True); p.write_text(out); print("wrote", p.relative_to(ROOT))
