@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-11-05",
   "offers": [
     {
       "id": "milepal",
@@ -7,7 +7,17 @@
       "title": "MilePal",
       "advertiser": "Plantburgh Products",
       "note": "Mileage log for your sourcing runs",
-      "url": "https://demos.plantburghproducts.com/milepal/"
+      "url": "https://play.google.com/store/apps/details?id=com.plantburgh.windshieldtime"
+    },
+    {
+      "id": "swimtime-pal",
+      "kind": "house",
+      "title": "Swimtime Pal",
+      "title_es": "Swimtime Pal",
+      "advertiser": "Plantburgh Products",
+      "note": "Swim workouts for your level and pool",
+      "note_es": "Entrenamientos de natación a tu nivel y tu piscina",
+      "url": "https://play.google.com/store/apps/details?id=com.plantburgh.swimtimepal"
     },
     {
       "id": "abra-masks",
