@@ -22,14 +22,13 @@
       "url": "https://play.google.com/store/apps/details?id=com.plantburgh.swimtimepal"
     },
     {
-      "id": "abra-costumes",
-      "title": "Costumes",
-      "title_es": "Disfraces",
-      "advertiser": "Abracadabra NYC",
-      "note": "Full costumes and accessories",
-      "note_es": "Disfraces completos y accesorios",
-      "url": "https://www.kqzyfj.com/click-101904028-17267156-1778559079000",
-      "ends": "2026-11-01"
+      "id": "cj-puregenius",
+      "title": "Clean protein",
+      "title_es": "Proteína limpia",
+      "advertiser": "Pure Genius Protein",
+      "note": "Grass-fed protein for your fitness goals",
+      "note_es": "Proteína de pasto para tus metas de ejercicio",
+      "url": "https://www.anrdoezrs.net/click-101904028-17317718"
     },
     {
       "id": "milepal",
@@ -41,14 +40,13 @@
       "url": "https://play.google.com/store/apps/details?id=com.plantburgh.windshieldtime"
     },
     {
-      "id": "abra-masks",
-      "title": "Halloween masks",
-      "title_es": "Máscaras de Halloween",
-      "advertiser": "Abracadabra NYC",
-      "note": "Masks for the season",
-      "note_es": "Máscaras para la temporada",
-      "url": "https://www.kqzyfj.com/click-101904028-17267167-1778559079000",
-      "ends": "2026-11-01"
+      "id": "cj-upscalecoffee",
+      "title": "Better morning coffee",
+      "title_es": "Un mejor café por la mañana",
+      "advertiser": "Upscale Coffee",
+      "note": "Fresh-roasted coffee for your morning routine",
+      "note_es": "Café recién tostado para tu rutina de la mañana",
+      "url": "https://www.anrdoezrs.net/click-101904028-17339195"
     },
     {
       "id": "light-meter",
@@ -58,6 +56,15 @@
       "note": "Measure the light your plants get",
       "note_es": "Mide la luz que reciben tus plantas",
       "url": "https://demos.plantburghproducts.com/light-meter/"
+    },
+    {
+      "id": "cj-vornado",
+      "title": "Fresh air at home",
+      "title_es": "Aire fresco en casa",
+      "advertiser": "Vornado",
+      "note": "Fans and air circulators for a better night",
+      "note_es": "Ventiladores y circuladores para dormir mejor",
+      "url": "https://www.anrdoezrs.net/click-101904028-17317082"
     },
     {
       "id": "abra-magic",

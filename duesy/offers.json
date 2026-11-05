@@ -22,6 +22,15 @@
       "url": "https://play.google.com/store/apps/details?id=com.plantburgh.swimtimepal"
     },
     {
+      "id": "cj-upscalecoffee",
+      "title": "Coffee for the house",
+      "title_es": "Café para la casa",
+      "advertiser": "Upscale Coffee",
+      "note": "Fresh-roasted coffee to share",
+      "note_es": "Café recién tostado para compartir",
+      "url": "https://www.anrdoezrs.net/click-101903757-17339195"
+    },
+    {
       "id": "flipline",
       "kind": "house",
       "title": "Flipline",
@@ -31,14 +40,13 @@
       "url": "https://demos.plantburghproducts.com/flipline/"
     },
     {
-      "id": "abra-masks",
-      "title": "Halloween masks",
-      "title_es": "Máscaras de Halloween",
-      "advertiser": "Abracadabra NYC",
-      "note": "Masks for the season",
-      "note_es": "Máscaras para la temporada",
-      "url": "https://www.kqzyfj.com/click-101903757-17267167-1778559079000",
-      "ends": "2026-11-01"
+      "id": "cj-vornado",
+      "title": "Keep the place cool",
+      "title_es": "Mantén la casa fresca",
+      "advertiser": "Vornado",
+      "note": "Fans and air circulators",
+      "note_es": "Ventiladores y circuladores de aire",
+      "url": "https://www.anrdoezrs.net/click-101903757-17317082"
     },
     {
       "id": "giganize",
@@ -57,16 +65,6 @@
       "note": "Log every business mile",
       "note_es": "Registra cada milla de trabajo",
       "url": "https://play.google.com/store/apps/details?id=com.plantburgh.windshieldtime"
-    },
-    {
-      "id": "abra-costumes",
-      "title": "Costumes",
-      "title_es": "Disfraces",
-      "advertiser": "Abracadabra NYC",
-      "note": "Full costumes and accessories",
-      "note_es": "Disfraces completos y accesorios",
-      "url": "https://www.kqzyfj.com/click-101903757-17267156-1778559079000",
-      "ends": "2026-11-01"
     },
     {
       "id": "layover-logic",
