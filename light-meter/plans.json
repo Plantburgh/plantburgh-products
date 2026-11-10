@@ -1,0 +1,11 @@
+{
+  "_readme": "Plantburgh Light Meter: what needs Pro and how much the free plan keeps. The app re-reads this file every 6 hours; no app update needed. Pro ids: noAds, dliLog, distance, csv (new ids arrive with app updates). Limits: spots, projects, placedPlants, reportsPerMonth, customLabels. A limit left out uses the app's built-in number. Backups are never limited.",
+  "pro": ["noAds", "dliLog", "distance", "csv"],
+  "freeLimits": {
+    "spots": 5,
+    "projects": 1,
+    "placedPlants": 3,
+    "reportsPerMonth": 2,
+    "customLabels": 5
+  }
+}
