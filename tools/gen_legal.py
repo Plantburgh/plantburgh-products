@@ -36,28 +36,35 @@ APPS = {
         delete="Open Swimtime Pal, go to <b>Settings › Privacy and data › Delete all my data</b>, and confirm. That erases every workout, plan, personal best and setting on this phone. Uninstalling the app also removes it. Swims you saved to Health Connect stay there until you delete them in Health Connect. A Google Play subscription is not cancelled by deleting data; cancel it in Google Play.",
     ),
     "light-meter": dict(
-        name="Plantburgh Light Meter", updated="2026-10-20",
-        short="Readings, spots, photos and projects stay on your phone. There is no account, the app makes no internet requests of its own, and it shows no third-party ads.",
+        name="Plantburgh Light Meter", updated="2026-11-11",
+        short="Readings, spots, photos and projects stay on your phone. There is no account and no analytics. The free version shows ads from a small feed we run; Pro removes them. Location is optional and stays on the phone.",
         privacy=lambda: [
             ("Who we are", f"Plantburgh Light Meter is made by {CO}. Questions: {MAIL}."),
-            ("What the app keeps", "Your light readings, spots, spot photos, plant checks, client projects, care reminders and settings. They are stored only on this phone, in the app's private storage. There is no account and we never receive them."),
-            ("Location (optional)", "If you allow location, the app uses it only when you add a spot or a project, to fill in the address on the phone. Your location is not sent to us or tracked in the background."),
+            ("What the app keeps", "Your light readings, spots, spot photos, plant checks, client projects, care reminders, home-screen widget pictures and settings. They are stored only on this phone, in the app's private storage. There is no account and we never receive them."),
+            ("Sensors", "The light sensor gives the reading. The compass (the phone's motion and magnetic sensors) tells which way a window faces. Both are read on the phone only and nothing is sent anywhere."),
+            ("Location (optional)", "The app asks once whether it may use your approximate location to put the real sun in the window picture. If you say no, it guesses from the phone's time zone instead. If you turn on Save spot location, new spots keep the address where they were taken; the phone's own Android address lookup turns the position into an address. Your location is kept only on this phone, never sent to us, and never tracked in the background."),
             ("Camera and photos", "Spot photos you take or pick are saved inside the app on this phone."),
-            ("Internet", "The app does not connect to the internet on its own. Links to our website, Play or the terms open in your browser."),
-            ("Ads and purchases", "This version shows only our own offline cards and no third-party ads. If a future version adds ads or a paid upgrade, this page will be updated before that version is released. Any purchase is handled by Google Play; we never see your payment details."),
-            ("Notifications", "Watering and care reminders are scheduled on the phone. Nothing is sent to us."),
-            ("Phone assistant (optional)", "If you turn on the assistant feature, an assistant on your phone can read readings you ask it about. What it does with them is covered by that assistant's own privacy policy."),
+            ("Internet", "The app downloads two small files: the list of ad cards (from app.giganize.work, run by us) and the Pro plan list (from plantburgh.github.io), plus the pictures for the cards. These requests carry only what any web request does, such as your IP address, and nothing about your readings. Links to our website, Play or these pages open in your browser."),
+            ("Ads", "The free version shows one small card at a time: our own products, or a partner's product through an affiliate network (for example CJ). No ad network runs inside the app, there is no advertising ID, and nothing about you is used to pick the ads. Tapping a card opens it in your browser through our link counter, which counts taps per card per day and keeps no identifier. If you buy something, the partner's site and the affiliate network handle it under their own policies. Pro shows no ads."),
+            ("Pro subscription and purchases", "Pro is a Google Play subscription. Google Play takes the payment and tells the app whether Pro is active; we never see your payment details. Google may collect diagnostics about purchases under Google's own privacy policy."),
+            ("Notifications", "Watering and re-measure reminders are scheduled on the phone. Nothing is sent to us."),
+            ("Home-screen widgets", "The widgets show copies of your spots and reminders that the app keeps on this phone. A Quick read tap reads the light sensor on the phone."),
+            ("Phone assistant (optional)", "Android assistants can ask the app for a reading or a plant check through Android's app functions. What the assistant does with the answer is covered by that assistant's own privacy policy."),
             ("Sharing and backups", "Data leaves the phone only when you share a PDF report, export a file or save a backup, and you choose where it goes. If Android backup is on, Android may include the app's data in your own Google account backup."),
-            ("Deleting", "Settings › Delete all my data erases everything the app saved on this phone. Uninstalling the app also removes it."),
+            ("Deleting", "Settings › Delete all my data erases everything the app saved on this phone. Uninstalling the app also removes it. We hold no copy."),
             ("Children", "The app is not directed at children under 13."),
+            ("Changes", "If the app starts handling data differently, this page is updated before that version is released, with the date at the top."),
         ],
         terms=lambda: [
-            ("Readings are estimates", "Phone light sensors vary by model and are not lab instruments. Readings and plant suggestions are guidance, not a guarantee of how a plant will do."),
+            ("Readings are estimates", "Phone light sensors vary by model and are not lab instruments. Readings, sun times, the compass and plant suggestions are guidance, not a guarantee of how a plant will do."),
             ("Plant safety", "Pet and toxicity notes are general guidance from published sources. If a person or pet eats a plant, call a doctor, a vet or poison control."),
+            ("Free and Pro", "The app is free to use with ads and some limits (for example how many spots you can save). Pro removes ads and unlocks the extra tools and limits shown in the app before you buy. What is in Pro and the free limits can change over time; anything you already saved stays yours."),
+            ("Subscription", "Pro is sold through Google Play, monthly or yearly, at the price Google Play shows before you confirm. It renews automatically at the end of each period until you cancel. Cancel any time in Google Play › Payments and subscriptions; Pro stays on until the end of the period you paid for. Refunds follow Google Play's refund policy."),
+            ("Ads and partner offers", "Partner cards link to other companies' sites. Their products, prices and terms are theirs; we may earn a commission when you buy."),
             ("The app", "The app is provided as is by Plantburgh Products LLC. We work to keep it accurate but cannot promise it is error free. To the extent the law allows, we are not liable for indirect or consequential losses."),
             ("Contact", f"Questions: {MAIL}."),
         ],
-        delete="Open the app, go to <b>Settings › Delete all my data</b>, and confirm. That erases every reading, spot, photo, project and reminder on this phone. Uninstalling the app also removes it. We hold no copy.",
+        delete="Open the app, go to <b>Settings › Delete all my data</b>, and confirm. That erases every reading, spot, photo, project and reminder on this phone. Uninstalling the app also removes it. We hold no copy. Deleting data does not cancel a Pro subscription; cancel it in Google Play.",
     ),
     "tourlog": dict(
         name="TourLog", updated="2026-10-20",
@@ -232,20 +239,27 @@ write("replicost", "Delete Your Data", raw=f"<p>{APPS['replicost']['delete']}</p
 CO_ES = "Plantburgh Products LLC, una empresa de Pensilvania propiedad de Plantburgh LLC"
 LM_ES_PRIV = [
     ("Quiénes somos", f"Plantburgh Light Meter es creado por {CO_ES}. Preguntas: {MAIL}."),
-    ("Qué guarda la app", "Tus lecturas de luz, lugares, fotos de lugares, revisiones de plantas, proyectos de clientes, recordatorios de cuidado y ajustes. Se guardan solo en este teléfono, en el almacenamiento privado de la app. No hay cuenta y nunca los recibimos."),
-    ("Ubicación (opcional)", "Si permites la ubicación, la app la usa solo cuando agregas un lugar o un proyecto, para escribir la dirección en el teléfono. Tu ubicación no se nos envía ni se rastrea en segundo plano."),
+    ("Qué guarda la app", "Tus lecturas de luz, lugares, fotos de lugares, revisiones de plantas, proyectos de clientes, recordatorios de cuidado, imágenes de los widgets y ajustes. Se guardan solo en este teléfono, en el almacenamiento privado de la app. No hay cuenta y nunca los recibimos."),
+    ("Sensores", "El sensor de luz da la lectura. La brújula (los sensores de movimiento y magnéticos del teléfono) indica hacia dónde mira una ventana. Ambos se leen solo en el teléfono y no se envía nada."),
+    ("Ubicación (opcional)", "La app pregunta una vez si puede usar tu ubicación aproximada para poner el sol real en la ventana. Si dices que no, la calcula a partir de la zona horaria del teléfono. Si activas Guardar ubicación del lugar, los lugares nuevos guardan la dirección donde se tomaron; la búsqueda de direcciones de Android convierte la posición en una dirección. Tu ubicación se guarda solo en este teléfono, nunca se nos envía y nunca se rastrea en segundo plano."),
     ("Cámara y fotos", "Las fotos de lugares que tomas o eliges se guardan dentro de la app en este teléfono."),
-    ("Internet", "La app no se conecta a internet por sí sola. Los enlaces a nuestro sitio, a Play o a los términos se abren en tu navegador."),
-    ("Anuncios y compras", "Esta versión muestra solo nuestras propias tarjetas sin conexión y ningún anuncio de terceros. Si una versión futura agrega anuncios o una mejora de pago, esta página se actualizará antes de publicar esa versión. Cualquier compra la gestiona Google Play; nunca vemos tus datos de pago."),
-    ("Notificaciones", "Los recordatorios de riego y cuidado se programan en el teléfono. No se nos envía nada."),
-    ("Asistente del teléfono (opcional)", "Si activas la función de asistente, un asistente de tu teléfono puede leer las lecturas que le pidas. Lo que haga con ellas se rige por la política de privacidad de ese asistente."),
+    ("Internet", "La app descarga dos archivos pequeños: la lista de tarjetas de anuncios (de app.giganize.work, nuestro) y la lista de planes Pro (de plantburgh.github.io), además de las imágenes de las tarjetas. Esas solicitudes llevan solo lo que lleva cualquier solicitud web, como tu dirección IP, y nada sobre tus lecturas. Los enlaces a nuestro sitio, a Play o a estas páginas se abren en tu navegador."),
+    ("Anuncios", "La versión gratuita muestra una tarjeta pequeña a la vez: nuestros productos o el producto de un socio a través de una red de afiliados (por ejemplo, CJ). No hay ninguna red publicitaria dentro de la app, no hay ID de publicidad y nada sobre ti se usa para elegir los anuncios. Al tocar una tarjeta se abre en tu navegador a través de nuestro contador de enlaces, que cuenta los toques por tarjeta y por día y no guarda ningún identificador. Si compras algo, el sitio del socio y la red de afiliados lo gestionan con sus propias políticas. Pro no muestra anuncios."),
+    ("Suscripción Pro y compras", "Pro es una suscripción de Google Play. Google Play cobra el pago e informa a la app si Pro está activo; nunca vemos tus datos de pago. Google puede recopilar diagnósticos de las compras según su propia política de privacidad."),
+    ("Notificaciones", "Los recordatorios de riego y de volver a medir se programan en el teléfono. No se nos envía nada."),
+    ("Widgets de la pantalla de inicio", "Los widgets muestran copias de tus lugares y recordatorios que la app guarda en este teléfono. Un toque en Lectura rápida lee el sensor de luz en el teléfono."),
+    ("Asistente del teléfono (opcional)", "Los asistentes de Android pueden pedirle a la app una lectura o una revisión de planta mediante las funciones de apps de Android. Lo que el asistente haga con la respuesta se rige por su propia política de privacidad."),
     ("Compartir y copias de seguridad", "Los datos salen del teléfono solo cuando compartes un informe PDF, exportas un archivo o guardas una copia de seguridad, y tú eliges a dónde van. Si la copia de seguridad de Android está activada, Android puede incluir los datos de la app en la copia de tu propia cuenta de Google."),
-    ("Borrar", "Ajustes › Borrar todos mis datos elimina todo lo que la app guardó en este teléfono. Desinstalar la app también lo elimina."),
+    ("Borrar", "Ajustes › Borrar todos mis datos elimina todo lo que la app guardó en este teléfono. Desinstalar la app también lo elimina. No guardamos ninguna copia."),
     ("Niños", "La app no está dirigida a menores de 13 años."),
+    ("Cambios", "Si la app empieza a tratar los datos de otra forma, esta página se actualiza antes de publicar esa versión, con la fecha arriba."),
 ]
 LM_ES_TERMS = [
-    ("Las lecturas son estimaciones", "Los sensores de luz de los teléfonos varían según el modelo y no son instrumentos de laboratorio. Las lecturas y sugerencias de plantas son una guía, no una garantía de cómo le irá a una planta."),
+    ("Las lecturas son estimaciones", "Los sensores de luz de los teléfonos varían según el modelo y no son instrumentos de laboratorio. Las lecturas, las horas de sol, la brújula y las sugerencias de plantas son una guía, no una garantía de cómo le irá a una planta."),
     ("Seguridad de las plantas", "Las notas sobre mascotas y toxicidad son una guía general basada en fuentes publicadas. Si una persona o una mascota come una planta, llama a un médico, a un veterinario o al centro de toxicología."),
+    ("Gratis y Pro", "La app se puede usar gratis con anuncios y algunos límites (por ejemplo, cuántos lugares puedes guardar). Pro quita los anuncios y desbloquea las herramientas y límites extra que la app muestra antes de comprar. Lo que incluye Pro y los límites gratuitos pueden cambiar con el tiempo; lo que ya guardaste sigue siendo tuyo."),
+    ("Suscripción", "Pro se vende a través de Google Play, mensual o anual, al precio que Google Play muestra antes de que confirmes. Se renueva automáticamente al final de cada periodo hasta que la canceles. Cancela cuando quieras en Google Play › Pagos y suscripciones; Pro sigue activo hasta el final del periodo pagado. Los reembolsos siguen la política de reembolsos de Google Play."),
+    ("Anuncios y ofertas de socios", "Las tarjetas de socios enlazan a sitios de otras empresas. Sus productos, precios y términos son suyos; podemos ganar una comisión cuando compras."),
     ("La app", "La app se ofrece tal cual por Plantburgh Products LLC. Trabajamos para que sea precisa, pero no podemos prometer que no tenga errores. En la medida que la ley lo permita, no somos responsables de pérdidas indirectas o consecuentes."),
     ("Contacto", f"Preguntas: {MAIL}."),
 ]
@@ -257,7 +271,8 @@ PAGE_ES = (PAGE.replace('lang="en"', 'lang="es"').replace("../docs.css", "../../
 for kind, secs, fname in (("Política de privacidad", LM_ES_PRIV, "privacy.html"), ("Términos de uso", LM_ES_TERMS, "terms.html")):
     body = "\n".join(f"<h2>{esc(t)}</h2>\n<p>{esc(b)}</p>" for t, b in secs)
     short = ('<div class="short"><p><b>En resumen:</b> Las lecturas, lugares, fotos y proyectos se quedan en tu teléfono. '
-             'No hay cuenta, la app no hace solicitudes a internet por sí sola y no muestra anuncios de terceros.</p></div>') if fname == "privacy.html" else ""
-    out = PAGE_ES.format(name="Plantburgh Light Meter", kind=kind, updated="2026-10-20", co=CO_ES, mail=MAIL, short=short, body=body)
+             'No hay cuenta ni analíticas. La versión gratuita muestra anuncios de un pequeño listado que gestionamos nosotros; Pro los quita. '
+             'La ubicación es opcional y se queda en el teléfono.</p></div>') if fname == "privacy.html" else ""
+    out = PAGE_ES.format(name="Plantburgh Light Meter", kind=kind, updated="2026-11-11", co=CO_ES, mail=MAIL, short=short, body=body)
     p = ROOT / "light-meter" / "es" / fname
     p.parent.mkdir(exist_ok=True); p.write_text(out); print("wrote", p.relative_to(ROOT))
