@@ -29,8 +29,10 @@ SWIM = "/Users/user11/Developer/swimpro/src/constants/legal.ts"
 
 APPS = {
     "swimtime-pal": dict(
-        name="Swimtime Pal", updated="2026-10-20",
-        short="Your swims, plans and settings stay on your phone. There is no account and we run no server that stores them. The Free plan shows ads; Standard and Pro make no internet requests of their own.",
+        # Matches the live pages hand-edited 2026-11-02 (a rerun used to roll them back).
+        name="Swimtime Pal", updated="November 2, 2026",
+        short="Your swims, plans and settings stay on your phone. There is no account and we run no server that stores them. The Free plan shows ads; Pro shows none. Location is used only during an open-water swim you start, and only while the app is in use.",
+        terms_short="You must be 13 or older. Swimming carries real risks and you swim at your own risk; the app's safety features are reminders, not a lifeguard. Free shows ads; Pro is a Google Play subscription you cancel in Google Play.",
         privacy=lambda: ts_sections(SWIM, "PRIVACY"),
         terms=lambda: ts_sections(SWIM, "TERMS"),
         delete="Open Swimtime Pal, go to <b>Settings › Privacy and data › Delete all my data</b>, and confirm. That erases every workout, plan, personal best and setting on this phone. Uninstalling the app also removes it. Swims you saved to Health Connect stay there until you delete them in Health Connect. A Google Play subscription is not cancelled by deleting data; cancel it in Google Play.",
@@ -180,7 +182,9 @@ def write(slug, kind, sections=None, raw=None, short=""):
 for slug, a in APPS.items():
     short = f'<div class="short"><p><b>The short version:</b> {esc(a["short"])}</p></div>'
     write(slug, "Privacy Policy", a["privacy"](), short=short)
-    write(slug, "Terms of Use", a["terms"]())
+    ts = a.get("terms_short")
+    write(slug, "Terms of Use", a["terms"](),
+          short=f'<div class="short"><p><b>The short version:</b> {esc(ts)}</p></div>' if ts else "")
     write(slug, "Delete Your Data", raw=f"<p>{a['delete']}</p>")
 
 
