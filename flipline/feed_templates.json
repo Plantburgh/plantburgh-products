@@ -1,0 +1,236 @@
+{
+  "updated": "2026-10-05",
+  "templates": [
+    {
+      "id": "nine_to_five_toys",
+      "name": "9to5Toys",
+      "blurb": "Tech, Apple and toy deals, written up with prices",
+      "urlPattern": "https://9to5toys.com/feed/",
+      "kind": "rss",
+      "categoryHint": "electronics",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "hip2save",
+      "name": "Hip2Save",
+      "blurb": "Household, kids and clearance deals, very busy",
+      "urlPattern": "https://hip2save.com/feed/",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "hip2save_freebies",
+      "name": "Hip2Save freebies",
+      "blurb": "Free samples and freebies only",
+      "urlPattern": "https://hip2save.com/category/freebies/feed/",
+      "kind": "rss",
+      "isFree": true,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "bens_bargains",
+      "name": "Ben's Bargains",
+      "blurb": "Long-running tech and home deal list",
+      "urlPattern": "https://www.bensbargains.com/rss/",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "dealnews_category",
+      "name": "DealNews by category",
+      "blurb": "Editor-picked deals in one category",
+      "urlPattern": "https://www.dealnews.com/{category}/?rss=1",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US",
+      "blanks": [
+        {
+          "key": "category",
+          "label": "Category",
+          "choices": {
+            "Electronics": "c142/Electronics",
+            "Computers": "c39/Computers",
+            "Home & Garden": "c196/Home-Garden",
+            "Tools": "c197/Tools",
+            "Gaming & Toys": "c186/Gaming-Toys",
+            "Sports & Fitness": "c211/Sports-Fitness",
+            "Clothing": "c202/Clothing",
+            "Furniture": "c199/Furniture",
+            "Automotive": "c238/Automotive",
+            "Movies, Music & Books": "c178/Movies-Music-Books"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slickdeals_search",
+      "name": "Slickdeals search",
+      "blurb": "Every new Slickdeals post matching your words",
+      "urlPattern": "https://slickdeals.net/newsearch.php?q={keyword}&searcharea=deals&searchin=first&rss=1",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US",
+      "blanks": [
+        {
+          "key": "keyword",
+          "label": "Search words",
+          "example": "lego, dewalt, switch"
+        }
+      ]
+    },
+    {
+      "id": "rfd_hot",
+      "name": "RedFlagDeals Hot Deals",
+      "blurb": "Canada's biggest deal forum",
+      "urlPattern": "https://forums.redflagdeals.com/feed/forum/9",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "CA"
+    },
+    {
+      "id": "rfd_freebies",
+      "name": "RedFlagDeals Freebies",
+      "blurb": "Free stuff posted on RFD (Canada)",
+      "urlPattern": "https://forums.redflagdeals.com/feed/forum/12",
+      "kind": "rss",
+      "isFree": true,
+      "storeOk": false,
+      "region": "CA"
+    },
+    {
+      "id": "ozbargain",
+      "name": "OzBargain",
+      "blurb": "Australia's community deal site",
+      "urlPattern": "https://www.ozbargain.com.au/deals/feed",
+      "kind": "rss",
+      "isFree": false,
+      "storeOk": false,
+      "region": "AU"
+    },
+    {
+      "id": "ozbargain_freebies",
+      "name": "OzBargain freebies",
+      "blurb": "Free stuff posted on OzBargain (Australia)",
+      "urlPattern": "https://www.ozbargain.com.au/freebies/feed",
+      "kind": "rss",
+      "isFree": true,
+      "storeOk": false,
+      "region": "AU"
+    },
+    {
+      "id": "reddit_hardwareswap",
+      "name": "r/hardwareswap",
+      "blurb": "People selling PC parts: sourcing, not retail",
+      "urlPattern": "https://www.reddit.com/r/hardwareswap/new/.rss",
+      "kind": "rss",
+      "categoryHint": "electronics",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "reddit_freebies",
+      "name": "r/freebies",
+      "blurb": "Free samples and giveaways from Reddit",
+      "urlPattern": "https://www.reddit.com/r/freebies/new/.rss",
+      "kind": "rss",
+      "isFree": true,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "cheapshark",
+      "name": "CheapShark",
+      "blurb": "PC game deals across Steam, GOG, Humble and more",
+      "urlPattern": "https://www.cheapshark.com/api/1.0/deals?pageSize=40",
+      "kind": "cheapshark",
+      "categoryHint": "games",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
+      "id": "gamerpower",
+      "name": "GamerPower",
+      "blurb": "Free games and in-game giveaways",
+      "urlPattern": "https://www.gamerpower.com/api/giveaways",
+      "kind": "gamerpower",
+      "categoryHint": "games",
+      "isFree": true,
+      "storeOk": false,
+      "region": "US"
+    }
+  ],
+  "dead": [
+    {
+      "name": "TechBargains",
+      "siteUrl": "https://www.techbargains.com/",
+      "reason": "Blocks feed readers (403)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "DealCatcher",
+      "siteUrl": "https://www.dealcatcher.com/",
+      "reason": "Blocks feed readers (403)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "Craigslist",
+      "siteUrl": "https://www.craigslist.org/",
+      "reason": "Turned off its feeds (403)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "Liquidation.com",
+      "siteUrl": "https://www.liquidation.com/",
+      "reason": "Blocks feed readers (403)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "DealSea",
+      "siteUrl": "https://dealsea.com/",
+      "reason": "No feed (404)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "Brad's Deals",
+      "siteUrl": "https://www.bradsdeals.com/",
+      "reason": "No feed (404)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "ShopGoodwill",
+      "siteUrl": "https://shopgoodwill.com/",
+      "reason": "No feed (404)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "Public Surplus",
+      "siteUrl": "https://www.publicsurplus.com/",
+      "reason": "No feed (404)",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "GovDeals",
+      "siteUrl": "https://www.govdeals.com/",
+      "reason": "Serves a web page, not a feed",
+      "checked": "2026-10-05"
+    },
+    {
+      "name": "The Krazy Coupon Lady",
+      "siteUrl": "https://www.thekrazycouponlady.com/",
+      "reason": "Serves a web page, not a feed",
+      "checked": "2026-10-05"
+    }
+  ]
+}

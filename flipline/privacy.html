@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Flipline</title>
-<meta name="description" content="Flipline privacy policy: no accounts, no analytics of our own. Your records stay on your device; photos leave it only when you send them, without their location.">
+<title>Privacy Policy · Flipline</title>
+<meta name="description" content="Flipline privacy policy: no accounts, no analytics of our own. Your records stay on your device; photos leave it only when you send them, without their location. Home-screen widgets read a file on your phone and send nothing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 
 <main class="doc">
   <h1>Flipline Privacy Policy</h1>
-  <p class="effective">Effective 2026-07-26 · revised 2026-10-05</p>
+  <p class="effective">Effective 2026-07-26 · revised 2026-11-17</p>
 
   <p>Flipline is an offline-first reselling companion. This policy is short
   because the app is built not to collect your data.</p>
@@ -33,50 +33,104 @@
   <h2>What we collect</h2>
   <p><strong>We (the developer) receive nothing about you.</strong> Flipline
   has no accounts, no sign-up, no analytics of our own, and no server that
-  receives your data. The free version shows ads (see <em>Ads and affiliate
-  links</em>).</p>
+  receives your data. The free version shows Google ads, and Google's ads
+  software collects some data on its own (see <em>Ads and your privacy
+  choices</em>).</p>
   <p>Google Play counts anything an app sends off the device as "collected",
-  even when it goes straight to a third party. By that definition Flipline
-  collects two things, only when you use the feature that needs them:
-  <strong>photos</strong> you send for identification, and <strong>search
-  terms</strong> (saved hunts, typed searches, barcodes, item titles and
-  brands for a price or recall check). Both are described below.</p>
+  even when it goes straight to a third party. By that definition Flipline's
+  own features collect two things, only when you use the feature that needs
+  them: <strong>photos</strong> you send for identification, and
+  <strong>search terms</strong> (saved hunts, typed searches, barcodes, item
+  titles and brands for a price or recall check). Both are described below.
+  The ads software adds the data listed under <em>Ads and your privacy
+  choices</em>.</p>
 
   <h2>Where your data lives</h2>
-  <p>Everything you enter — inventory, purchases, sales, expenses, mileage,
-  photos, API keys, AI spending totals — is stored in a local database
-  <strong>on your device only</strong>. Backups exist only where you choose to
-  share or save them.</p>
+  <p>Everything you enter (inventory, purchases, sales, expenses, mileage,
+  photos, API keys, AI spending totals, your profile) is stored <strong>on
+  your device only</strong>. API keys and sign-ins sit in Android's encrypted
+  key store, apart from your records. Backups exist only where you choose to
+  share or save them, and in Android's own backup.</p>
+  <p><strong>Android backup.</strong> Flipline keeps one copy of your records
+  (not photos, not API keys, not sign-ins, not your Pro status) for Android's
+  backup. Android saves it with <strong>your Google account</strong> only when
+  it can encrypt it end to end, which needs a screen lock on your phone, and
+  copies the same file when you move to a new phone by cable or Wi-Fi. A new
+  phone or a reinstall gets your records back. Plantburgh never receives it,
+  and nothing else in the app is backed up this way. Turn it off in your
+  phone's Settings › Google › Backup.</p>
+
+  <h2>Home-screen widgets</h2>
+  <p>Flipline has four optional home-screen widgets: a Scan button, this
+  week's profit, the best deal in your feed, and your top three deals. The
+  app writes their numbers to a small file on your phone, and the widgets only
+  read that file. They fetch nothing and send nothing. Anyone who can see your
+  home screen can see what they show, so remove a widget if you would rather
+  keep those numbers out of sight.</p>
 
   <h2>Photos never carry your location</h2>
   <p>Your phone's camera may tag each photo with where it was taken. Flipline
   removes those tags (location and the rest of the camera details) from every
-  photo before it leaves your device: to an AI provider, to Google Lens, or to
-  eBay. The copy kept on your device is unchanged.</p>
+  photo before it leaves your device: to an AI provider, to Google Lens, to
+  eBay, or when you share a photo. The copy kept on your device is
+  unchanged.</p>
 
   <h2>What leaves your device</h2>
-  <p>Data leaves your device only when <strong>you</strong> trigger an action
-  that calls a third-party service, using credentials you supplied:</p>
+  <p>Data leaves your device only when you use a feature that calls a
+  third-party service, using keys or sign-ins you supplied where that service
+  needs them. That includes the deal feed you set up: it refreshes when you
+  open the app or tap refresh, and, if you turn on <strong>Alerts with
+  Flipline closed</strong> (More), about once an hour in the background while
+  you have a saved hunt.</p>
   <ul>
-    <li><strong>Deal sources, price and recall lookups</strong> (e.g. GSA
-    Auctions, eBay, CJ, Best Buy, Walmart, Woot, Meh, Discogs, Scryfall, Open
-    Library, Open Food Facts, UPCitemdb, the U.S. CPSC recall database): your
-    search or refresh sends the query to that service. Your home location is
-    used on the device to filter results and is not sent.</li>
+    <li><strong>Deal sources, price and recall lookups.</strong> Your search
+    or refresh sends the query to that service:
+      <ul>
+        <li>Deal feeds: GSA Auctions (through api.data.gov), Best Buy,
+        Walmart, CJ Affiliate, Woot, Meh and DealNews.</li>
+        <li>Feeds you add yourself: any public deal feed whose address you
+        paste or pick from our list, for example DealNews categories,
+        CheapShark and GamerPower (game deals and giveaways) and other deal
+        sites' RSS feeds. The request goes to the site that publishes the
+        feed.</li>
+        <li>Prices and product facts: Discogs, Scryfall (Magic cards), the
+        Pokémon TCG API (pokemontcg.io), Open Library, Open Food Facts and
+        UPCitemdb.</li>
+        <li>Safety: the U.S. CPSC recall database (saferproducts.gov).</li>
+        <li>Test builds given to a small group of testers can also read
+        Reddit, Slickdeals and eBay searches. The Play Store version does
+        not.</li>
+      </ul>
+      Your home location is used on the device to filter results and is not
+      sent.</li>
     <li><strong>Photo ID.</strong> You choose how a photo is identified:
       <ul>
-        <li><strong>On this phone</strong> (Gemini Nano, where your phone
-        supports it): the photo is read on the device and sent nowhere.</li>
+        <li><strong>On this phone</strong>: Gemini Nano where your phone
+        supports it, and Google's on-device ML Kit readers (object finder,
+        labels, text reader) on every other Android phone. The photo is read
+        on the device and sent nowhere.</li>
         <li><strong>Google Lens</strong>: you hand the photo to Google's Lens
         app yourself, and Google handles it under its own terms. Flipline
         sends nothing.</li>
-        <li><strong>A cloud AI you connected</strong> (Google Gemini,
-        Anthropic Claude, or OpenRouter) under <strong>your own API
-        key</strong> and that provider's terms. In lot mode, one photo becomes
-        several requests: the whole photo, then close-up crops of it. Photos
-        are never sent automatically.</li>
-        <li><strong>AI off</strong>: More → Scanner money → <em>Use AI to
-        identify photos</em> off. No photo is sent to any AI.</li>
+        <li><strong>A cloud AI you connected</strong> under <strong>your own
+        API key</strong> and that provider's terms: Google Gemini, Anthropic
+        Claude, OpenRouter, or any other AI service you add a key for (OpenAI,
+        xAI Grok, Mistral, Groq, DeepSeek, Together, Fireworks, Perplexity, or
+        any address you type for a service that speaks the OpenAI API). The
+        photo goes only to the AI you pick, or the first one in the order you
+        set in Money › Shipping &amp; AI costs › AI providers &amp; routing.
+        In lot mode, one photo becomes several requests: the whole photo,
+        then close-up crops of it. Photos are never sent automatically.</li>
+        <li><strong>A model on your own computer</strong> (Ollama or LM
+        Studio) that you add by its address on your Wi-Fi: the photo goes
+        over your own network to that computer and nowhere else. Flipline
+        sends it in plain http only to a private address (192.168…, 10…,
+        172.16–31…, 127…, localhost, or a name ending in .local) and refuses
+        it for any other address. That traffic is not encrypted, so use it
+        only on a network you trust.</li>
+        <li><strong>AI off</strong>: Money › Shipping &amp; AI costs ›
+        <em>Use AI to identify photos</em> off. No photo is sent to any
+        AI.</li>
       </ul>
       What each cloud provider does with a photo:
       <ul>
@@ -90,38 +144,90 @@
         are often run by providers that log requests and may train on them.
         You can turn that off in your OpenRouter account's privacy
         settings.</li>
+        <li><strong>Any other service you add</strong>: its own API terms and
+        data policy apply. Read them before you add the key.</li>
+        <li><strong>Picture match</strong> sends each item's crop to the AI
+        that does that job (Gemini, or another you added that can search the
+        web), the same way.</li>
       </ul>
     </li>
-    <li><strong>Posting a listing to eBay</strong> (optional, one tap per
-    item): the title, description, price and photos you chose go to eBay under
-    your own eBay sign-in. eBay hosts the photos publicly. Flipline keeps your
-    eBay sign-in token in the device's secure storage and never sees your eBay
-    password.</li>
+    <li><strong>Posting a listing to eBay</strong> (optional, Pro, one tap per
+    item, using your own eBay developer keys and eBay sign-in): the title,
+    description, price and photos you chose go to eBay. eBay hosts the photos
+    publicly. Offers you send to an item's watchers go to eBay the same way.
+    Flipline keeps your eBay sign-in token in the device's secure storage and
+    never sees your eBay password.</li>
+    <li><strong>Links you tap</strong> (a marketplace search, a deal,
+    directions for a pickup route) open in your browser or in that company's
+    app, and that site handles the visit under its own policy.</li>
     <li><strong>Sharing</strong>: backups and CSV exports go wherever you
     share them.</li>
   </ul>
   <p>Each third-party service processes those requests under its own privacy
   policy. Flipline adds no identifiers of its own to any request.</p>
-  <p><strong>Two public files.</strong> To stay current without an update, the
-  app downloads two public files from this website (hosted by GitHub Pages):
-  a list of AI models and a table of AI prices. The request carries nothing
-  about you. Like any website, the host sees your IP address.</p>
+  <p><strong>Public files the app downloads.</strong> To stay current without
+  an update, the app downloads these public files. The requests carry nothing
+  about you; like any website, the host sees your IP address.</p>
+  <ul>
+    <li>From this website (hosted by GitHub Pages): a list of AI models
+    (<code>models.json</code>), a table of AI prices
+    (<code>prices.json</code>) and ready-made deal feeds
+    (<code>feed_templates.json</code>).</li>
+    <li>From our offers server (<code>app.giganize.work/promos.json</code>):
+    the list of sponsored offers and of our other apps (More › More from
+    Plantburgh), a few times a day.</li>
+  </ul>
+  <p>Every request Flipline makes to the internet uses https, pictures
+  shown with a deal included. The one exception is an AI model you run on
+  your own computer (above), which stays on your own network.</p>
 
-  <h2>Ads and affiliate links</h2>
-  <p>The free version of Flipline shows banner ads served by Google AdMob.
-  Google's SDK may collect your device's advertising ID and ad interactions
-  under Google's privacy policy; you can reset or delete the advertising ID in
-  Android settings, and a consent prompt is shown where your state's law
-  requires one. Ads never see your inventory, prices, photos, or keys — those
-  never leave the local database.</p>
+  <h2>Ads and your privacy choices</h2>
+  <p>The Play Store version of Flipline shows banner ads served by Google
+  AdMob. Google's Mobile Ads SDK starts when the first ad is due and, under
+  <a href="https://policies.google.com/privacy">Google's privacy policy</a>,
+  collects and shares with Google: your device's <strong>advertising
+  ID</strong> and app set ID, ad <strong>interactions</strong> (views and
+  taps), <strong>diagnostics and crash data</strong> from the SDK, and your
+  <strong>approximate location</strong> from your IP address. Google uses this
+  to show and measure ads and to prevent fraud.</p>
+  <ul>
+    <li><strong>Consent.</strong> Before the first ad, Flipline runs Google's
+    consent tool (User Messaging Platform) and shows a consent form where your
+    state's law requires one. Without consent, Google serves non-personalised
+    ads.</li>
+    <li><strong>Change your choices</strong> any time in <strong>More › Ads ›
+    Privacy choices</strong> (shown where a choice applies to you).</li>
+    <li><strong>Advertising ID</strong>: reset or delete it in your phone's
+    Settings › Privacy › Ads (or Settings › Google › Ads).</li>
+    <li><strong>Flipline Pro</strong> turns banner ads off, and the ads SDK
+    never starts for a Pro user.</li>
+  </ul>
+  <p>Ads never see your inventory, prices, photos, or keys. Those stay on
+  your device.</p>
+
+  <h2>Sponsored offers and affiliate links</h2>
+  <p>Flipline shows a few <strong>Sponsored</strong> offers of its own: deals
+  from stores we partner with through CJ Affiliate, listed in the feed and,
+  when Google has no ad to show, in the banner space. They are plain links.
+  The app sends nothing about you to show them; tapping one opens the store's
+  page in your browser through CJ's tracking link, and CJ and the store may
+  then set their own cookies under their own privacy policies.</p>
   <p>Some links to marketplaces are affiliate links. When one can earn us a
   commission, the app says so next to the link. It costs you nothing extra and
   changes nothing about the price you pay.</p>
 
+  <h2>Flipline Pro</h2>
+  <p>If you buy Pro, Google Play handles the payment. Flipline never sees your
+  card. The app keeps only that you have Pro, which plan, and when Google Play
+  last confirmed it, on this device. Pro users see no banner ads and can hide
+  sponsored offers.</p>
+
   <h2>Data retention and deletion</h2>
-  <p>We retain nothing, so there is nothing for us to delete. To erase all app
-  data, use <strong>More → Erase all data</strong> in the app, or delete the
-  app. Photos and searches already sent to an AI or search provider are that
+  <p>We retain nothing, so there is nothing for us to delete. Data the ads SDK
+  sent to Google is Google's; see its privacy policy. To erase all app data,
+  use <strong>More › Account &amp; settings › Erase all data</strong> in the
+  app, or delete the app. Remove any Flipline widgets from your home screen
+  too. Photos and searches already sent to an AI or search provider are that
   provider's to delete. To revoke an AI provider's access, disconnect it in
   the app and revoke the key with that provider.</p>
 
@@ -130,12 +236,19 @@
   under 18. Its photo identification runs on AI services that require users
   to be 18 or older.</p>
 
+  <h2>Languages</h2>
+  <p>The app runs in English and Spanish. It follows your phone's language,
+  and you can pick one in More › Account &amp; settings › Profile › Language.
+  This policy is written in English. If a translation of it ever differs from
+  the English, the English version governs.</p>
+
   <h2>Changes</h2>
   <p>If a future version ever changes what leaves the device, this policy and
   the in-app copy will be updated first, and the change will be opt-in.</p>
 
   <h2>Contact</h2>
-  <p>Plantburgh Products LLC (a Pennsylvania company owned by Plantburgh LLC) — <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></p>
+  <p>Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC:
+  <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></p>
 </main>
 
 <footer>
