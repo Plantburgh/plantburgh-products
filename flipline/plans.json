@@ -1,9 +1,22 @@
 {
   "_readme": "Flipline: plans sold, Pro sheet words, Free/Pro caps and the ad switch. The app re-reads this file every 6 hours; no app update needed. plans: monthly and/or yearly (the Play products must exist). headline/bullets: blank = the app's own words. freeLimits: comps (1-20), ownFeeds (1-50), historyDays (7-90). proLimits: ownFeeds (free-500), historyDays (free-365). A number left out uses the app's built-in one. ads: admobLive true + a real androidBanner unit id = Google banners for Free users; false = our own offers only.",
-  "plans": ["monthly"],
+  "plans": [
+    "monthly"
+  ],
   "headline": "",
   "bullets": [],
-  "freeLimits": {"comps": 3, "ownFeeds": 3, "historyDays": 30},
-  "proLimits": {"ownFeeds": 50, "historyDays": 90},
-  "ads": {"admobLive": false, "androidBanner": "", "iosBanner": ""}
+  "freeLimits": {
+    "comps": 3,
+    "ownFeeds": 3,
+    "historyDays": 30
+  },
+  "proLimits": {
+    "ownFeeds": 50,
+    "historyDays": 90
+  },
+  "ads": {
+    "admobLive": false,
+    "androidBanner": "ca-app-pub-2159010138127473/1531806499",
+    "iosBanner": ""
+  }
 }
