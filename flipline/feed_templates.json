@@ -13,6 +13,17 @@
       "region": "US"
     },
     {
+      "id": "techbargains",
+      "name": "TechBargains",
+      "blurb": "Electronics and computer deals, every one with its price",
+      "urlPattern": "https://feeds.feedburner.com/Techbargains",
+      "kind": "rss",
+      "categoryHint": "electronics",
+      "isFree": false,
+      "storeOk": false,
+      "region": "US"
+    },
+    {
       "id": "hip2save",
       "name": "Hip2Save",
       "blurb": "Household, kids and clearance deals, very busy",
