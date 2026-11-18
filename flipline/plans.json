@@ -22,6 +22,9 @@
   "ebay": {
     "live": false,
     "soldsLive": false,
-    "proxyUrl": ""
+    "proxyUrl": "https://us-central1-plantburgh-flipline.cloudfunctions.net/ebay"
+  },
+  "assistant": {
+    "mcpUrl": "https://us-central1-plantburgh-flipline.cloudfunctions.net/mcp"
   }
 }
