@@ -60,7 +60,7 @@
       "urlPattern": "https://www.dealnews.com/{category}/?rss=1",
       "kind": "rss",
       "isFree": false,
-      "storeOk": false,
+      "storeOk": true,
       "region": "US",
       "blanks": [
         {
@@ -167,7 +167,7 @@
       "kind": "cheapshark",
       "categoryHint": "games",
       "isFree": false,
-      "storeOk": false,
+      "storeOk": true,
       "region": "US"
     },
     {
