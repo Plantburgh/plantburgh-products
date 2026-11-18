@@ -26,5 +26,11 @@
   },
   "assistant": {
     "mcpUrl": "https://us-central1-plantburgh-flipline.cloudfunctions.net/mcp"
-  }
+  },
+  "reviewCodes": [
+    {
+      "sha256": "69e648a39e3d5fc7938065492d88b2e08347fad265fb5e26e2312e210074e96e",
+      "until": "2027-02-16"
+    }
+  ]
 }
