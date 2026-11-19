@@ -1,0 +1,5 @@
+{
+ "_doc": "Light Meter plant list updates (owner 11-18). Plants here are added to the app, or replace a built-in plant with the same id, with no app update. Build entries with lightmeter/tools/build_plant_overlay.py; photos go in light-meter/photos/<id>.jpg (same site only, under 300 KB).",
+ "version": 1,
+ "plants": []
+}
