@@ -14,7 +14,7 @@
     "customLabels": 5
   },
   "ads": {
-    "admobLive": false,
+    "admobLive": true,
     "admobBannerId": "ca-app-pub-2159010138127473/2169974435"
   }
 }
