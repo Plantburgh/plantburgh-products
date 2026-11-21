@@ -10,12 +10,12 @@
 <div class="wrap">
 <div class="top"><span class="tag">Plantburgh Products</span><a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a> <a href="delete.html">Delete your data</a></div>
 <h1>Replicost: Privacy Policy</h1>
-<p class="muted">Last updated: 2026-10-20 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
+<p class="muted">Last updated: 2026-11-21 · Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC</p>
 
-<p><b>Last updated: 20 October 2026</b></p>
+<p><b>Last updated: 21 November 2026</b></p>
 <p>Replicost is made by Plantburgh Products LLC, a Pennsylvania limited liability company.</p>
 <p>This policy is short because the app is simple: <b>we do not run a server, and we do not collect anything.</b> There is no account to create, no analytics, and no tracking by us. The version installed from an app store shows ads from Google (see "Advertising" below). Everything the app computes, it computes on your device, and everything it remembers, it remembers on your device.</p>
-<p>There is exactly one way data leaves your phone, and you have to turn it on yourself. That is photo identification, and it is described in full below.</p>
+<p>Data about you leaves your phone only when you start it: photo identification (described in full below), and a few public lookups you tap for yourself (see "Lookups you start"). The app also reads two small public files, plan settings and current prices (see "Plans and purchases" and "Price updates"), and talks to Google Play about purchases; none of these carries anything you typed, saved or photographed.</p>
 <h2>What stays on your device</h2>
 <p>All of it, unless you connect a Gemini key:</p>
 <ul><li>Saved estimates, projects, and their ledgers</li><li>Your shop profile — metro, state, hourly rate, tools, skills, municipality</li><li>Anything you have reported: actual costs, quotes you were given, notes on a line</li><li>Your Gemini API key, held in the device keychain</li><li>The daily identification counter</li></ul>
@@ -27,6 +27,38 @@
 <p>We will not describe photo identification as private, confidential, or on-device, because none of those would be true.</p>
 <p><b>Location is stripped before the photo is sent.</b> Replicost removes the EXIF and IPTC metadata blocks — which is where GPS coordinates, timestamps, and device identifiers live — from every image before it goes to Google. This happens for photos you take, photos you choose from your library, photos shared into the app from elsewhere, and receipt photos alike.</p>
 <p>The model is asked to describe what it sees. It never sets a price. Every number in Replicost comes from our own cost data, computed on your device.</p>
+<h2>Lookups you start</h2>
+<p>Each of these sends one request, only when you tap for it, straight from your phone to a public service. We never receive any of it.</p>
+<ul><li><b>Your address, to the US Census Bureau</b> (<code>geocoding.geo.census.gov</code>), when you type</li></ul>
+<p>an address in your shop profile, so the app can find your metro area and state. The address you typed is sent; the app keeps only the metro and state it gets back.</p>
+<ul><li><b>A vehicle VIN, to NHTSA</b> (<code>vpic.nhtsa.dot.gov</code>), when you decode a VIN on a car</li></ul>
+<p>estimate.</p>
+<ul><li><b>A vehicle's year, make and model, to NHTSA</b> (<code>api.nhtsa.gov</code>), when you tap the</li></ul>
+<p>recalls and owner complaints card on a car estimate.</p>
+<ul><li><b>"More from Plantburgh"</b> (<code>app.giganize.work</code>, run by us), when you open that row on</li></ul>
+<p>the You tab: the app asks for the current list of our other apps. The request carries no data about you, only the app's name. As with any web request, the server and its host (Google Cloud) see your IP address. Tapping an app opens its store page through a link on the same server that counts the tap; nothing about you is attached to it.</p>
+<p>Each service handles what it receives under its own policy.</p>
+<h2>Price updates</h2>
+<p>Up to twice a day the app checks two public files of current prices (<code>plantburgh.github.io</code>, hosted by GitHub): the same published prices the app already cites, re-read more recently, and the day's gold and silver spot prices. It is how an estimate stays current between app updates. The request contains nothing about you and nothing about what you price; as with any web request, GitHub sees your IP address. The file is kept on your phone so the app works offline.</p>
+<h2>Your phone's assistant</h2>
+<p>On Android 16 and later, an assistant you use on your phone (such as Gemini) can ask Replicost what something costs or check a quote for you. Replicost works the answer out on your phone, from the same prices the app uses, and hands it to that assistant. Replicost sends nothing anywhere to do this and keeps no record of the question. What the assistant does with your question and the answer is covered by that assistant's own policy.</p>
+<h2>The home-screen widget</h2>
+<p>If you add the Replicost widget to your home screen, it shows your most recently saved estimate. The app writes that one estimate's title and figures, and your theme colours, to a small file on your phone that the widget reads. The file never leaves the phone and is removed with <b>Erase everything</b>.</p>
+<h2>Currency</h2>
+<p>You can choose a currency for figures to be shown in. The exchange rates ship inside the app with the date they were read; choosing a currency sends nothing anywhere. The choice is kept on your phone. Replicost's prices are US prices from US sources: a converted figure is the US price in your currency, not a local price.</p>
+<h2>A contractor's quote</h2>
+<p>When you check a quote, what you paste or type, including the contractor's figures and hourly rate, is read on your phone and kept only with that job on your phone. It is not sent anywhere.</p>
+<h2>The welcome screens</h2>
+<p>The first time you open Replicost it shows three short screens. Whether you have seen them is remembered on your phone and nowhere else.</p>
+<h2>Plans and purchases</h2>
+<ul><li><b>Plan settings file.</b> Up to twice a day the app downloads a small public file</li></ul>
+<p>(<code>plantburgh.github.io</code>, hosted by GitHub) that says what the free plan includes and how long the trial is. The request contains nothing about you; as with any web request, GitHub sees your IP address.</p>
+<ul><li><b>Google Play Billing.</b> Buying, restoring and checking Replicost Pro happen through</li></ul>
+<p>Google Play. Google handles your payment details; we never receive them. The app asks Google Play only whether this Google account owns Replicost Pro.</p>
+<ul><li><b>The free trial</b> is counted on your phone, from the first time you open the app. Its</li></ul>
+<p>start date stays when you use "Erase everything", so erasing does not restart it.</p>
+<h2>Reading a photo on your phone (no key)</h2>
+<p>Without a Gemini key, Replicost can still name what is in a photo and read a receipt, using Google ML Kit, which runs on your phone. <b>The photo does not leave your device.</b> ML Kit itself may send Google basic diagnostic and usage information (such as the device model, app version and how long a reading took) to keep the feature working; it does not send the photo or the text it reads. Google's ML Kit terms govern that.</p>
 <h2>Camera and photo library permissions</h2>
 <p>The app asks for camera access to photograph a subject, and photo library access to choose an existing picture. Both are used for identification and nothing else. Decline either and the rest of the app works normally — typing what you want priced needs no permissions at all.</p>
 <h2>Deleting your data</h2>
@@ -39,7 +71,7 @@
 <h2>What the store forms say</h2>
 <p>For clarity, these are the answers we give on Apple's privacy nutrition labels and Google Play's Data Safety form, and they follow from everything above:</p>
 <ul><li><b>Data collected by us:</b> none.</li><li><b>Data shared with third parties:</b> photographs, to Google, only when you have</li></ul>
-<p>connected your own API key and only at the moment you identify something. Optional, user-initiated, and never for advertising.</p>
+<p>connected your own API key and only at the moment you identify something. Optional, user-initiated, and never for advertising. An address you type, to the US Census Bureau, and a VIN or a vehicle's year, make and model, to NHTSA, only when you tap for that lookup.</p>
 <ul><li><b>Data stored on device:</b> estimates, profile, reports, API key.</li><li><b>Tracking:</b> none by us. In the store version only, Google's Mobile Ads SDK collects the advertising ID and device signals for ads (see below).</li></ul>
 <h2>Changes</h2>
 <p>If this policy changes materially, the app will show the new version on next launch. The date at the top always reflects the current text.</p>
@@ -48,7 +80,7 @@
 <h2>Advertising — the store version only</h2>
 <p>The version of Replicost installed from an app store shows advertising. It is the only version that does; a personal or sideloaded build shows none and makes none of the requests described here.</p>
 <p>Ads are served by Google's Mobile Ads SDK. To do that, the SDK collects the device's advertising identifier and device signals (model, operating system, IP address, approximate location derived from it, and interaction with the ad) and sends them to Google under Google's privacy policy. We do not receive this data. Where the law requires it, you are asked for consent before the first ad request, and you can change that choice from the same prompt later.</p>
-<p>Ads appear beside the app's screens and never inside an estimate, an export, or a shared record. Nothing you type, photograph, save, or report is used to target them.</p>
+<p>Ads appear only on the free plan, never during the free trial or with Pro, beside the app's screens and never inside an estimate, an export, or a shared record. Some ads are optional videos you choose to watch to use a Pro tool for a while. Nothing you type, photograph, save, or report is used to target them. Cards for our own apps and partner offers come from our server (<code>app.giganize.work</code>); opening one goes through a link that counts the tap, with nothing about you attached.</p>
 <h2>Contact</h2>
 <p>Questions: <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a>.</p>
 <footer>Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC · <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></footer>
