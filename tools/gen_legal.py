@@ -228,7 +228,7 @@ def md_to_html(md):
                 if lst: flush()
                 lst = (tag, [])
             lst[1].append(m.group(2)); continue
-        if lst and line.startswith("   "):
+        if lst and line.startswith("  "):
             lst[1][-1] += " " + s; continue
         if lst: flush()
         para.append(s)

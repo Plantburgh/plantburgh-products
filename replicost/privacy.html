@@ -29,14 +29,7 @@
 <p>The model is asked to describe what it sees. It never sets a price. Every number in Replicost comes from our own cost data, computed on your device.</p>
 <h2>Lookups you start</h2>
 <p>Each of these sends one request, only when you tap for it, straight from your phone to a public service. We never receive any of it.</p>
-<ul><li><b>Your address, to the US Census Bureau</b> (<code>geocoding.geo.census.gov</code>), when you type</li></ul>
-<p>an address in your shop profile, so the app can find your metro area and state. The address you typed is sent; the app keeps only the metro and state it gets back.</p>
-<ul><li><b>A vehicle VIN, to NHTSA</b> (<code>vpic.nhtsa.dot.gov</code>), when you decode a VIN on a car</li></ul>
-<p>estimate.</p>
-<ul><li><b>A vehicle's year, make and model, to NHTSA</b> (<code>api.nhtsa.gov</code>), when you tap the</li></ul>
-<p>recalls and owner complaints card on a car estimate.</p>
-<ul><li><b>"More from Plantburgh"</b> (<code>plantburgh.github.io</code>, hosted by GitHub), when you open</li></ul>
-<p>that row on the You tab: the app reads a public file listing our other apps, with their icons. The request contains nothing about you; as with any web request, GitHub sees your IP address. The list is kept on your phone for a few hours. Tapping an app opens its store page directly.</p>
+<ul><li><b>Your address, to the US Census Bureau</b> (<code>geocoding.geo.census.gov</code>), when you type an address in your shop profile, so the app can find your metro area and state. The address you typed is sent; the app keeps only the metro and state it gets back.</li><li><b>A vehicle VIN, to NHTSA</b> (<code>vpic.nhtsa.dot.gov</code>), when you decode a VIN on a car estimate.</li><li><b>A vehicle's year, make and model, to NHTSA</b> (<code>api.nhtsa.gov</code>), when you tap the recalls and owner complaints card on a car estimate.</li><li><b>"More from Plantburgh"</b> (<code>plantburgh.github.io</code>, hosted by GitHub), when you open that row on the You tab: the app reads a public file listing our other apps, with their icons. The request contains nothing about you; as with any web request, GitHub sees your IP address. The list is kept on your phone for a few hours. Tapping an app opens its store page directly.</li></ul>
 <p>Each service handles what it receives under its own policy.</p>
 <h2>Price updates</h2>
 <p>Up to twice a day the app checks two public files of current prices (<code>plantburgh.github.io</code>, hosted by GitHub): the same published prices the app already cites, re-read more recently, and the day's gold and silver spot prices. It is how an estimate stays current between app updates. The request contains nothing about you and nothing about what you price; as with any web request, GitHub sees your IP address. The file is kept on your phone so the app works offline.</p>
@@ -51,12 +44,7 @@
 <h2>The welcome screens</h2>
 <p>The first time you open Replicost it shows three short screens. Whether you have seen them is remembered on your phone and nowhere else.</p>
 <h2>Plans and purchases</h2>
-<ul><li><b>Plan settings file.</b> Up to twice a day the app downloads a small public file</li></ul>
-<p>(<code>plantburgh.github.io</code>, hosted by GitHub) that says what the free plan includes and how long the trial is. The request contains nothing about you; as with any web request, GitHub sees your IP address.</p>
-<ul><li><b>Google Play Billing.</b> Buying, restoring and checking Replicost Pro happen through</li></ul>
-<p>Google Play. Google handles your payment details; we never receive them. The app asks Google Play only whether this Google account owns Replicost Pro.</p>
-<ul><li><b>The free trial</b> is counted on your phone, from the first time you open the app. Its</li></ul>
-<p>start date stays when you use "Erase everything", so erasing does not restart it.</p>
+<ul><li><b>Plan settings file.</b> Up to twice a day the app downloads a small public file (<code>plantburgh.github.io</code>, hosted by GitHub) that says what the free plan includes and how long the trial is. The request contains nothing about you; as with any web request, GitHub sees your IP address.</li><li><b>Google Play Billing.</b> Buying, restoring and checking Replicost Pro happen through Google Play. Google handles your payment details; we never receive them. The app asks Google Play only whether this Google account owns Replicost Pro.</li><li><b>The free trial</b> is counted on your phone, from the first time you open the app. Its start date stays when you use "Erase everything", so erasing does not restart it. So the trial runs once per Google account, that date is also kept outside the app, together with the free plan's counts: quote checks used this month and last, extra checks earned by watching an ad, and the last day each tool was unlocked by an ad. On Android this is Google Play services' Block Store (one small entry, <code>replicost_limits_v1</code>), which belongs to your Google account, outlasts uninstalling the app and comes back on a new phone with that account; on an iPhone it is your iCloud Keychain. It holds dates and counts only, nothing about you or your estimates, and we never receive it.</li></ul>
 <h2>Reading a photo on your phone (no key)</h2>
 <p>Without a Gemini key, Replicost can still name what is in a photo and read a receipt, using Google ML Kit, which runs on your phone. <b>The photo does not leave your device.</b> ML Kit itself may send Google basic diagnostic and usage information (such as the device model, app version and how long a reading took) to keep the feature working; it does not send the photo or the text it reads. Google's ML Kit terms govern that.</p>
 <h2>Camera and photo library permissions</h2>
@@ -70,9 +58,7 @@
 <p>Replicost is not directed to children under 13 and we do not knowingly collect anything from anyone, of any age.</p>
 <h2>What the store forms say</h2>
 <p>For clarity, these are the answers we give on Apple's privacy nutrition labels and Google Play's Data Safety form, and they follow from everything above:</p>
-<ul><li><b>Data collected by us:</b> none.</li><li><b>Data shared with third parties:</b> photographs, to Google, only when you have</li></ul>
-<p>connected your own API key and only at the moment you identify something. Optional, user-initiated, and never for advertising. An address you type, to the US Census Bureau, and a VIN or a vehicle's year, make and model, to NHTSA, only when you tap for that lookup.</p>
-<ul><li><b>Data stored on device:</b> estimates, profile, reports, API key.</li><li><b>Tracking:</b> none by us. In the store version only, Google's Mobile Ads SDK collects the advertising ID and device signals for ads (see below).</li></ul>
+<ul><li><b>Data collected by us:</b> none.</li><li><b>Data shared with third parties:</b> photographs, to Google, only when you have connected your own API key and only at the moment you identify something. Optional, user-initiated, and never for advertising. An address you type, to the US Census Bureau, and a VIN or a vehicle's year, make and model, to NHTSA, only when you tap for that lookup.</li><li><b>Data stored on device:</b> estimates, profile, reports, API key.</li><li><b>Tracking:</b> none by us. In the store version only, Google's Mobile Ads SDK collects the advertising ID and device signals for ads (see below).</li></ul>
 <h2>Changes</h2>
 <p>If this policy changes materially, the app will show the new version on next launch. The date at the top always reflects the current text.</p>
 <h2>Contact</h2>
@@ -80,7 +66,7 @@
 <h2>Advertising — the store version only</h2>
 <p>The version of Replicost installed from an app store shows advertising. It is the only version that does; a personal or sideloaded build shows none and makes none of the requests described here.</p>
 <p>Ads are served by Google's Mobile Ads SDK. To do that, the SDK collects the device's advertising identifier and device signals (model, operating system, IP address, approximate location derived from it, and interaction with the ad) and sends them to Google under Google's privacy policy. We do not receive this data. Where the law requires it, you are asked for consent before the first ad request, and you can change that choice from the same prompt later.</p>
-<p>Ads appear only on the free plan, never during the free trial or with Pro, beside the app's screens and never inside an estimate, an export, or a shared record. Some ads are optional videos you choose to watch to use a Pro tool for a while. Nothing you type, photograph, save, or report is used to target them. Cards for our own apps and partner offers come from our server (<code>app.giganize.work</code>); opening one goes through a link that counts the tap, with nothing about you attached.</p>
+<p>Ads appear only on the free plan, never during the free trial or with Pro, beside the app's screens and never inside an estimate, an export, or a shared record. Some ads are optional videos you choose to watch to use a Pro tool for a while. Nothing you type, photograph, save, or report is used to target them. A partner card may be picked to suit the kind of job on screen (a tire offer beside a car estimate); that choice is made on your phone from the card's own words, and nothing about the job is sent. Cards for our own apps and partner offers come from our server (<code>app.giganize.work</code>); opening one goes through a link that counts the tap, with nothing about you attached.</p>
 <h2>Contact</h2>
 <p>Questions: <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a>.</p>
 <footer>Plantburgh Products LLC, a Pennsylvania company owned by Plantburgh LLC · <a href="mailto:contact@plantburgh.com">contact@plantburgh.com</a></footer>
