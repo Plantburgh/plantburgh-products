@@ -65,6 +65,7 @@ APPS = {
             ("Yearly gets cheaper the longer you stay", "The yearly plan steps down for each full year you stay subscribed: the first-year price, then a lower second-year price, then the lowest price every year after (in the US: $29.99, $24.99, then $19.99). The app offers the lower price when you've earned it; you switch with one tap and it starts at your next renewal, never mid-year. Pausing, or a payment Google Play recovers, keeps your step (the time away doesn't count). If you cancel and come back within 7 days you keep your step; after that you start again at the first-year price. The monthly plan has one price and no steps."),
             ("Ads and partner offers", "Partner cards link to other companies' sites. Their products, prices and terms are theirs; we may earn a commission when you buy."),
             ("The app", "The app is provided as is by Plantburgh Products LLC. We work to keep it accurate but cannot promise it is error free. To the extent the law allows, we are not liable for indirect or consequential losses."),
+            ("Access codes", "We may give free or reduced access with an access code, for example to the app's founder, testers, reviewers or partners, for a set time or for life. A code may work on one install or account only, has no cash value and can't be sold or transferred, and we can end one that is misused."),
             ("Contact", f"Questions: {MAIL}."),
         ],
         delete="Open the app, go to <b>Settings › Delete all my data</b>, and confirm. That erases every reading, spot, photo, project and reminder on this phone. Uninstalling the app also removes it. We hold no copy. Deleting data does not cancel a Pro subscription; cancel it in Google Play.",
@@ -89,6 +90,7 @@ APPS = {
             ("Consent", "Only record people who have agreed to it, as the law where you are requires."),
             ("Transcripts are automatic", "Transcripts and speaker labels are made by software and can be wrong. Check anything important against the recording."),
             ("The app", "TourLog is provided as is by Plantburgh Products LLC. To the extent the law allows, we are not liable for indirect or consequential losses."),
+            ("Access codes", "We may give free or reduced access with an access code, for example to the app's founder, testers, reviewers or partners, for a set time or for life. A code may work on one install or account only, has no cash value and can't be sold or transferred, and we can end one that is misused."),
             ("Contact", f"Questions: {MAIL}."),
         ],
         delete="Delete a tour inside TourLog to erase its recording, photos and transcript. Uninstalling the app removes everything. We hold no copy.",
@@ -106,6 +108,7 @@ APPS = {
         ],
         terms=lambda: [
             ("The game", "Drift is provided as is by Plantburgh Products LLC. In-game coins have no cash value."),
+            ("Access codes", "We may give free or reduced access with an access code, for example to the app's founder, testers, reviewers or partners, for a set time or for life. A code may work on one install or account only, has no cash value and can't be sold or transferred, and we can end one that is misused."),
             ("Contact", f"Questions: {MAIL}."),
         ],
         delete="Clear Drift's storage in Android Settings › Apps › Drift › Storage, or uninstall the game. We hold no copy.",
@@ -132,6 +135,7 @@ APPS = {
             ("Premium", "Premium is a monthly or yearly Google Play subscription that renews until you cancel in Google Play. Refunds follow Google Play's policies."),
             ("Rules", "Do not upload photos you have no right to share, automate scans, resell results, or get around the daily limits. We can suspend accounts that do. If we retire Premium, we will not charge for time you did not get."),
             ("The app", "The app is provided as is by Plantburgh Products LLC. To the extent the law allows, we are not liable for indirect or consequential losses."),
+            ("Access codes", "We may give free or reduced access with an access code, for example to the app's founder, testers, reviewers or partners, for a set time or for life. A code may work on one install or account only, has no cash value and can't be sold or transferred, and we can end one that is misused."),
             ("Contact", f"Questions: {MAIL}."),
         ],
         delete="<b>In the app:</b> open <b>More › Delete account</b> (or <b>Settings › Delete account</b>) and confirm. That deletes your account and everything stored under it right away: garden, notes, reminders, scan history, scan photos, usage counts and advisor threads. A Google Play subscription is not cancelled by deleting the account; cancel it in Google Play first.</p><p><b>Without the app:</b> email <a href=\"mailto:contact@plantburgh.com?subject=Delete%20my%20Plant%20Id%20account\">contact@plantburgh.com</a> with the subject <i>Delete my Plant Id account</i> from the email address on the account. If you only use the app as a guest, include the account code shown in the app's More tab. We delete the account and everything stored under it within 30 days and reply to confirm. Scan counts kept for fraud and billing checks are deleted at the same time.",
@@ -267,6 +271,7 @@ LM_ES_TERMS = [
     ("El plan anual baja de precio mientras sigas", "El plan anual baja por cada año completo que sigas suscrito: el precio del primer año, luego un precio menor el segundo y después el precio más bajo cada año (en EE. UU.: 29,99 USD, 24,99 USD y luego 19,99 USD). La app te ofrece el precio menor cuando lo has ganado; cambias con un toque y empieza en tu próxima renovación, nunca a mitad de año. Pausar, o un pago que Google Play recupera, mantiene tu escalón (el tiempo fuera no cuenta). Si cancelas y vuelves en 7 días, mantienes tu escalón; después empiezas de nuevo con el precio del primer año. El plan mensual tiene un solo precio y no baja."),
     ("Anuncios y ofertas de socios", "Las tarjetas de socios enlazan a sitios de otras empresas. Sus productos, precios y términos son suyos; podemos ganar una comisión cuando compras."),
     ("La app", "La app se ofrece tal cual por Plantburgh Products LLC. Trabajamos para que sea precisa, pero no podemos prometer que no tenga errores. En la medida que la ley lo permita, no somos responsables de pérdidas indirectas o consecuentes."),
+    ("Códigos de acceso", "Podemos dar acceso gratis o con descuento mediante un código de acceso, por ejemplo al fundador de la app, a quienes la prueban, a revisores o a socios, por un tiempo o de por vida. Un código puede servir en una sola instalación o cuenta, no tiene valor en dinero y no se puede vender ni transferir, y podemos anular uno que se use mal."),
     ("Contacto", f"Preguntas: {MAIL}."),
 ]
 PAGE_ES = (PAGE.replace('lang="en"', 'lang="es"').replace("../docs.css", "../../docs.css")
