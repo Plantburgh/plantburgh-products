@@ -1,0 +1,133 @@
+{
+ "v": 2,
+ "updated": "2026-11-21",
+ "how": "Shared 'More from Plantburgh' list. Edit this file and push plantburgh-products main: every app that reads it shows the change on next open, no app release. Each app hides its own id. play/appStore/web: a null store means 'coming soon'. icon is relative to this file.",
+ "apps": [
+  {
+   "id": "light-meter",
+   "name": "Light Meter",
+   "icon": "icons/light-meter.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.lightmeter",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/light-meter",
+   "line": {
+    "en": "Turns your phone into a light meter for houseplants.",
+    "es": "Convierte tu teléfono en un medidor de luz para plantas de interior.",
+    "fr": "Transforme votre téléphone en luxmètre pour plantes d’intérieur.",
+    "zh": "把手机变成室内植物的测光表。",
+    "tl": "Ginagawang light meter para sa halaman sa bahay ang iyong telepono.",
+    "vi": "Biến điện thoại thành máy đo ánh sáng cho cây trong nhà.",
+    "ar": "يحوّل هاتفك إلى مقياس ضوء لنباتات المنزل."
+   }
+  },
+  {
+   "id": "plant-id",
+   "name": "Plant ID",
+   "icon": "icons/plant-id.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburghproducts.plantid",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/plant-id",
+   "line": {
+    "en": "Point your phone at a plant and know what it is and how to care for it.",
+    "es": "Apunta tu teléfono a una planta y descubre cuál es y cómo cuidarla.",
+    "fr": "Pointez votre téléphone vers une plante pour savoir ce que c’est et comment en prendre soin.",
+    "zh": "用手机对准植物，就知道它是什么、怎么养护。",
+    "tl": "Itutok ang telepono sa halaman at malalaman mo kung ano ito at paano alagaan.",
+    "vi": "Hướng điện thoại vào cây để biết đó là cây gì và cách chăm sóc.",
+    "ar": "وجّه هاتفك نحو نبتة لتعرف ما هي وكيف تعتني بها."
+   }
+  },
+  {
+   "id": "milepal",
+   "name": "MilePal",
+   "icon": "icons/milepal.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.windshieldtime",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/milepal",
+   "line": {
+    "en": "Logs your business miles as you drive, ready at tax time.",
+    "es": "Registra tus millas de trabajo mientras conduces, listas para los impuestos.",
+    "fr": "Enregistre vos trajets professionnels pendant que vous conduisez, prêts pour les impôts.",
+    "zh": "开车时自动记录工作里程，报税时直接可用。",
+    "tl": "Itinatala ang milya mo sa trabaho habang nagmamaneho, handa sa panahon ng buwis.",
+    "vi": "Ghi lại số dặm công việc khi bạn lái xe, sẵn sàng cho mùa thuế.",
+    "ar": "يسجّل أميال عملك أثناء القيادة، جاهزة وقت الضرائب."
+   }
+  },
+  {
+   "id": "giganize",
+   "name": "Giganize",
+   "icon": "icons/giganize.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.giganize",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/giganize",
+   "line": {
+    "en": "Post a gig, share one link and see who takes it.",
+    "es": "Publica un trabajo, comparte un enlace y mira quién lo toma.",
+    "fr": "Publiez une mission, partagez un lien et voyez qui la prend.",
+    "zh": "发布一份活，分享一个链接，看看谁来接。",
+    "tl": "Mag-post ng gig, ibahagi ang isang link at tingnan kung sino ang kukuha.",
+    "vi": "Đăng một việc, chia sẻ một đường link và xem ai nhận.",
+    "ar": "انشر مهمة وشارك رابطًا واحدًا وانظر من يأخذها."
+   }
+  },
+  {
+   "id": "goal-tracker",
+   "name": "GoalTracker",
+   "icon": "icons/goal-tracker.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.goaltracker",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/goal-tracker",
+   "line": {
+    "en": "Habits and goals that fill up like a bubble.",
+    "es": "Hábitos y metas que se llenan como una burbuja.",
+    "fr": "Des habitudes et des objectifs qui se remplissent comme une bulle.",
+    "zh": "习惯和目标像气泡一样慢慢填满。",
+    "tl": "Mga gawi at layunin na napupuno na parang bula.",
+    "vi": "Thói quen và mục tiêu đầy dần như một bong bóng.",
+    "ar": "عادات وأهداف تمتلئ مثل الفقاعة."
+   }
+  },
+  {
+   "id": "swimtime-pal",
+   "name": "Swimtime Pal",
+   "icon": "icons/swimtime-pal.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.swimtimepal",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/swimtime-pal",
+   "line": {
+    "en": "Swim workouts built for your level and pool, with a pool-deck timer.",
+    "es": "Entrenamientos de natación para tu nivel y tu piscina, con cronómetro.",
+    "fr": "Des séances de natation adaptées à votre niveau et à votre bassin, avec chrono.",
+    "zh": "按你的水平和泳池定制的游泳训练，附池边计时器。",
+    "tl": "Mga swim workout para sa antas mo at sa pool mo, may timer sa gilid ng pool.",
+    "vi": "Bài tập bơi theo trình độ và hồ bơi của bạn, kèm đồng hồ bấm giờ bên hồ.",
+    "ar": "تمارين سباحة على قدر مستواك ومسبحك، مع مؤقت على حافة المسبح."
+   }
+  },
+  {
+   "id": "layover-logic",
+   "name": "Layover Logic",
+   "icon": "icons/layover-logic.png",
+   "play": null,
+   "appStore": null,
+   "web": "https://layoverlogic.com.pl/",
+   "site": "https://plantburghproducts.com/layover-logic",
+   "line": {
+    "en": "How much night you really have on a layover, and what is near the hotel.",
+    "es": "Cuánta noche tienes de verdad en una pernocta y qué hay cerca del hotel.",
+    "fr": "Combien de nuit il vous reste vraiment en escale, et ce qu’il y a près de l’hôtel.",
+    "zh": "过夜时你真正能睡多久，以及酒店附近有什么。",
+    "tl": "Gaano kahaba talaga ang gabi mo sa layover, at ano ang malapit sa hotel.",
+    "vi": "Bạn thực sự còn bao nhiêu thời gian nghỉ đêm khi quá cảnh, và gần khách sạn có gì.",
+    "ar": "كم تبقّى لك فعلًا من الليل في التوقف، وما القريب من الفندق."
+   }
+  }
+ ]
+}
