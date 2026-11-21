@@ -3,5 +3,12 @@
   "trialDays": 14,
   "plus": ["followUps", "recap", "translate", "liveWords", "safeCopy", "widgets", "themes"],
   "adsOn": true,
-  "ads": { "admobLive": false, "admobBannerId": null }
+  "ads": {
+    "admobLive": false,
+    "admobBannerId": null,
+    "admobRewardedId": null,
+    "rewardedPerDay": 1,
+    "rewardedPerMonth": 5,
+    "rewardedBank": 1
+  }
 }
