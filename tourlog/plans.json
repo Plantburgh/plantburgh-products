@@ -1,0 +1,7 @@
+{
+  "freeTranscripts": 3,
+  "trialDays": 14,
+  "plus": ["followUps", "recap", "translate", "liveWords", "safeCopy", "widgets", "themes"],
+  "adsOn": true,
+  "ads": { "admobLive": false, "admobBannerId": null }
+}
