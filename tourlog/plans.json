@@ -1,12 +1,20 @@
 {
   "freeTranscripts": 3,
   "trialDays": 14,
-  "plus": ["followUps", "recap", "translate", "liveWords", "safeCopy", "widgets", "themes"],
+  "plus": [
+    "followUps",
+    "recap",
+    "translate",
+    "liveWords",
+    "safeCopy",
+    "widgets",
+    "themes"
+  ],
   "adsOn": true,
   "ads": {
     "admobLive": false,
-    "admobBannerId": null,
-    "admobRewardedId": null,
+    "admobBannerId": "ca-app-pub-2159010138127473/9741145600",
+    "admobRewardedId": "ca-app-pub-2159010138127473/2858549198",
     "rewardedPerDay": 1,
     "rewardedPerMonth": 5,
     "rewardedBank": 1
