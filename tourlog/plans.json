@@ -1,5 +1,7 @@
 {
   "freeTranscripts": 3,
+  "freeAiSummaries": 3,
+  "freeFullSummaries": 1,
   "trialDays": 14,
   "plus": [
     "followUps",
