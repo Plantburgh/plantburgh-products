@@ -130,6 +130,24 @@
    }
   },
   {
+   "id": "tourlog",
+   "name": "TourLog",
+   "icon": "icons/tourlog.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.tourlog",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/tourlog",
+   "line": {
+    "en": "Record client walkthroughs and get a transcript with who said what, on your phone.",
+    "es": "Graba los recorridos con clientes y obtén la transcripción con quién dijo qué, en tu teléfono.",
+    "fr": "Enregistrez les visites clients et obtenez la transcription avec qui a dit quoi, sur votre téléphone.",
+    "zh": "录下带客户看现场的过程，在手机上得到标明谁说了什么的文字记录。",
+    "tl": "I-record ang walkthrough kasama ang kliyente at kunin ang transcript kung sino ang nagsabi ng ano, sa telepono mo.",
+    "vi": "Ghi âm buổi đi khảo sát cùng khách và nhận bản chép lời ghi rõ ai nói gì, ngay trên điện thoại.",
+    "ar": "سجّل جولات المعاينة مع العملاء واحصل على نص مكتوب يبيّن من قال ماذا، على هاتفك."
+   }
+  },
+  {
    "id": "layover-logic",
    "name": "Layover Logic",
    "icon": "icons/layover-logic.png",
