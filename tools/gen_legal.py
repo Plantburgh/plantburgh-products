@@ -28,6 +28,34 @@ def ts_sections(path, name):
 SWIM = "/Users/user11/Developer/swimpro/src/constants/legal.ts"
 
 APPS = {
+    "price-rewind": dict(
+        name="Price Rewind", updated="2026-11-24",
+        short="Price Rewind works out what a thing is right on your phone. Your photos, tags and notes stay on your phone. There is no account. The free plan shows our own cards and may show Google ads; Pro shows no ads.",
+        privacy=lambda: [
+            ("Who we are", f"Price Rewind is made by {CO}. Questions: {MAIL}."),
+            ("What the app keeps", "Your tags, the photos you snap, boards, time capsules, tag colors and settings. They are stored only on this phone, in the app's private storage. There is no account and we never receive them."),
+            ("Camera and photos", "The camera is used only while the Snap screen is open. Working out what an item is (image labels, barcodes and, on phones that have it, Google's on-device Gemini Nano) runs on the phone. Photos are never uploaded to identify an item."),
+            ("Prices and facts", "Prices and facts come from data files the app downloads from our website (GitHub Pages) and keeps on the phone. That download carries what any web request does (your IP address and device type) and nothing about your tags or photos."),
+            ("Our own cards", "On the free plan the app downloads a short list of our own apps and partner deals from our server to show as cards. The request names the app, not you."),
+            ("Ads on the free plan", "When ads are turned on, the free plan shows a Google AdMob banner. Google may use your phone's advertising ID, IP address and device details to show and measure ads under Google's policies, and asks for consent where the law requires it. Your photos and tags are never sent to advertisers. Pro shows no ads."),
+            ("eBay links", "\"What's it worth\" opens an eBay search for sold items in your browser. That link carries our eBay Partner Network tag, so eBay may pay us a small commission if you buy. eBay's own privacy policy covers what happens on eBay."),
+            ("Purchases", "Pro is billed by Google Play. Google tells the app which plan you have. We never see your payment details."),
+            ("Notifications", "Time capsule reminders are scheduled on the phone. Nothing is sent to us."),
+            ("Sharing and backups", "Data leaves the phone only when you share a card, export a spreadsheet, save a backup ZIP or email us about a fact, and you choose where it goes. If Android backup is on, Android may include your tags and some photos in your own Google account backup."),
+            ("Deleting", "Settings › Delete everything erases every tag, photo, capsule and setting on this phone. Uninstalling the app also removes it. We hold no copy."),
+            ("Children", "Price Rewind is not directed at children under 13."),
+        ],
+        terms=lambda: [
+            ("Prices are estimates", "Launch prices, typical prices and today's-money figures are estimates built from public price records and inflation data. They are for fun and curiosity, not appraisals, insurance values or financial advice. What something sells for depends on its condition and the buyer."),
+            ("Identification", "The app's guess about what an item is can be wrong. Pick the right one or type it in."),
+            ("Facts", "Facts are written to be accurate but can contain mistakes. Hold a fact to tell us it looks wrong."),
+            ("Pro", "Pro is a Google Play subscription that renews until you cancel in Google Play. A free trial, when offered, is run by Google Play and turns into a paid plan unless you cancel before it ends. Refunds follow Google Play's policies."),
+            ("Links", "Links to eBay and other sites take you to services we do not run. Their terms apply there."),
+            ("The app", "Price Rewind is provided as is by Plantburgh Products LLC. To the extent the law allows, we are not liable for indirect or consequential losses."),
+            ("Contact", f"Questions: {MAIL}."),
+        ],
+        delete="Open Price Rewind, go to <b>Settings › Delete everything</b>, type DELETE and confirm. That erases every tag, photo, board, time capsule and setting on this phone. Uninstalling the app also removes it. We hold no copy. A Google Play subscription is not cancelled by deleting data; cancel it in Google Play.",
+    ),
     "swimtime-pal": dict(
         # Matches the live pages hand-edited 2026-11-02 (a rerun used to roll them back).
         name="Swimtime Pal", updated="November 2, 2026",
