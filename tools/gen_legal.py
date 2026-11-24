@@ -236,7 +236,7 @@ def md_to_html(md):
     return "\n".join(out)
 
 
-APPS["replicost"] = dict(name="Replicost", updated="2026-11-21",
+APPS["replicost"] = dict(name="Replicost", updated="2026-11-24",
                          short="", privacy=lambda: [], terms=lambda: [],
                          delete="Open Replicost and choose <b>You › Erase everything on this device</b>. That removes every saved estimate, project, ledger, report, note, your shop profile, the home-screen widget's copy of your last estimate and your stored Gemini key. Nothing is kept on a server. Photos you identified were sent to Google under your own key; delete them from your Google account.")
 for kind, fname in (("Privacy Policy", "privacy.md"), ("Terms of Use", "terms.md")):
