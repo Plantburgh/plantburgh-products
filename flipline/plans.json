@@ -15,7 +15,7 @@
     "historyDays": 90
   },
   "ads": {
-    "admobLive": false,
+    "admobLive": true,
     "androidBanner": "ca-app-pub-2159010138127473/1531806499",
     "iosBanner": ""
   },

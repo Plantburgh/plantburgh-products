@@ -1,6 +1,6 @@
 {
  "v": 2,
- "updated": "2026-11-21",
+ "updated": "2026-11-24",
  "how": "Shared 'More from Plantburgh' list. Edit this file and push plantburgh-products main: every app that reads it shows the change on next open, no app release. Each app hides its own id. play/appStore/web: a null store means 'coming soon'. icon is relative to this file.",
  "apps": [
   {
@@ -109,6 +109,24 @@
     "tl": "Mga swim workout para sa antas mo at sa pool mo, may timer sa gilid ng pool.",
     "vi": "Bài tập bơi theo trình độ và hồ bơi của bạn, kèm đồng hồ bấm giờ bên hồ.",
     "ar": "تمارين سباحة على قدر مستواك ومسبحك، مع مؤقت على حافة المسبح."
+   }
+  },
+  {
+   "id": "flipline",
+   "name": "Flipline",
+   "icon": "icons/flipline.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.flipline",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/flipline",
+   "line": {
+    "en": "Scan a flea market table, see what each item is worth, and know what to pay.",
+    "es": "Escanea una mesa del mercado de pulgas, ve qué vale cada artículo y qué pagar.",
+    "fr": "Scannez une table de brocante, voyez ce que vaut chaque objet et sachez combien payer.",
+    "zh": "扫一下跳蚤市场的摊位，看每件东西值多少，知道该出多少钱。",
+    "tl": "I-scan ang mesa sa flea market: halaga ng bawat item at magkano ang ibabayad.",
+    "vi": "Quét bàn hàng ở chợ trời, biết từng món đáng giá bao nhiêu và nên trả bao nhiêu.",
+    "ar": "امسح طاولة في سوق السلع المستعملة، واعرف قيمة كل غرض وكم تدفع."
    }
   },
   {
