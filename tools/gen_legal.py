@@ -264,9 +264,9 @@ def md_to_html(md):
     return "\n".join(out)
 
 
-APPS["replicost"] = dict(name="Replicost", updated="2026-11-24",
+APPS["replicost"] = dict(name="Replicost", updated="2026-11-25",
                          short="", privacy=lambda: [], terms=lambda: [],
-                         delete="Open Replicost and choose <b>You › Erase everything on this device</b>. That removes every saved estimate, project, ledger, report, note, your shop profile, the home-screen widget's copy of your last estimate and your stored Gemini key. Nothing is kept on a server. Photos you identified were sent to Google under your own key; delete them from your Google account.")
+                         delete="Open Replicost and choose <b>You › Erase everything on this device</b>. That removes every saved estimate, project, ledger, report, note, your shop profile, the home-screen widget's copy of your last estimate and your stored Gemini key. Nothing is kept on a server. Photos identified on the phone (its built-in Gemini or labeler) never left it. Photos identified with your own Gemini key were sent to Google under that key; delete them from your Google account. Crash reports, if the app ever crashed, are kept by Google Firebase for 90 days and contain nothing you entered.")
 for kind, fname in (("Privacy Policy", "privacy.md"), ("Terms of Use", "terms.md")):
     write("replicost", kind, raw=md_to_html((RC_LEGAL / fname).read_text()))
 write("replicost", "Delete Your Data", raw=f"<p>{APPS['replicost']['delete']}</p>")
