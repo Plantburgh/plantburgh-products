@@ -1,0 +1,1 @@
+[{"big":"{n}×","id":"tn_cpi","kind":"then_now","min_value":1.05,"needs":["cpi_us"],"round":"one_decimal","text":{"en":"Prices overall went up {n}× between {year0} and {year}."},"value":"t.cpi_us / t0.cpi_us","years":[1913,2100]}]

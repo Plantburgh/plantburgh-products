@@ -1,0 +1,1 @@
+[{"big":"{n}%","id":"wi_mattress","kind":"what_if","max_value":97.0,"min_value":1.0,"needs":["cpi_us"],"round":"int","text":{"en":"Under a mattress since {year0}, it would buy only {n}% as much in {year}."},"value":"t0.cpi_us / t.cpi_us * 100","years":[1913,2100]}]
