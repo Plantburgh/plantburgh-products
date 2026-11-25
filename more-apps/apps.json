@@ -1,6 +1,6 @@
 {
  "v": 2,
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "how": "Shared 'More from Plantburgh' list. Edit this file and push plantburgh-products main: every app that reads it shows the change on next open, no app release. Each app hides its own id. play/appStore/web: a null store means 'coming soon'. icon is relative to this file.",
  "apps": [
   {
@@ -127,6 +127,24 @@
     "tl": "I-scan ang mesa sa flea market: halaga ng bawat item at magkano ang ibabayad.",
     "vi": "Quét bàn hàng ở chợ trời, biết từng món đáng giá bao nhiêu và nên trả bao nhiêu.",
     "ar": "امسح طاولة في سوق السلع المستعملة، واعرف قيمة كل غرض وكم تدفع."
+   }
+  },
+  {
+   "id": "price-rewind",
+   "name": "Price Rewind",
+   "icon": "icons/price-rewind.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.pricerewind",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/price-rewind",
+   "line": {
+    "en": "Snap anything old and see what it cost back then, in today's money.",
+    "es": "Toma una foto de algo antiguo y mira cuánto costaba entonces, en dinero de hoy.",
+    "fr": "Photographiez un objet ancien et voyez ce qu’il coûtait à l’époque, en argent d’aujourd’hui.",
+    "zh": "拍下任何老物件，看看它当年卖多少钱，折合成今天的钱是多少。",
+    "tl": "Kunan ng litrato ang anumang luma at alamin ang presyo nito noon, sa pera ngayon.",
+    "vi": "Chụp bất kỳ món đồ cũ nào và xem hồi đó nó giá bao nhiêu, tính theo tiền ngày nay.",
+    "ar": "صوّر أي شيء قديم واعرف كم كان سعره آنذاك، بأموال اليوم."
    }
   },
   {
