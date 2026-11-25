@@ -1,6 +1,6 @@
 {
   "_note": "Replicost plan file. Publish at plantburgh.github.io/plantburgh-products/replicost/plans.json. Changes here reach every phone within 12 hours, no app update. Prices are NOT here: they come from Google Play.",
-  "trialDays": 14,
+  "trialDays": 0,
   "yearlyOn": false,
   "pro": [
     "lineItemExport",
@@ -14,8 +14,8 @@
   ],
   "freeLimits": {
     "savedEstimates": 10,
-    "projects": 1,
-    "quoteChecksPerMonth": 1
+    "projects": 3,
+    "quoteChecksPerMonth": 4
   },
   "ads": {
     "admobLive": false
