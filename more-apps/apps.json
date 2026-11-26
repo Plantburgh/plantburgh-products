@@ -1,6 +1,6 @@
 {
  "v": 2,
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "how": "Shared 'More from Plantburgh' list. Edit this file and push plantburgh-products main: every app that reads it shows the change on next open, no app release. Each app hides its own id. play/appStore/web: a null store means 'coming soon'. icon is relative to this file.",
  "apps": [
   {
@@ -145,6 +145,24 @@
     "tl": "Kunan ng litrato ang anumang luma at alamin ang presyo nito noon, sa pera ngayon.",
     "vi": "Chụp bất kỳ món đồ cũ nào và xem hồi đó nó giá bao nhiêu, tính theo tiền ngày nay.",
     "ar": "صوّر أي شيء قديم واعرف كم كان سعره آنذاك، بأموال اليوم."
+   }
+  },
+  {
+   "id": "duesy",
+   "name": "Duesy",
+   "icon": "icons/duesy.png",
+   "play": "https://play.google.com/store/apps/details?id=com.plantburgh.duesy",
+   "appStore": null,
+   "web": null,
+   "site": "https://plantburghproducts.com/duesy",
+   "line": {
+    "en": "Never forget who owes you. Private IOU and debt tracker, no account needed.",
+    "es": "Nunca olvides quién te debe. Libreta privada de deudas, sin cuentas.",
+    "fr": "N’oubliez plus jamais qui vous doit. Carnet de dettes privé, sans compte.",
+    "zh": "再也不忘谁欠你钱。私密的借条和欠款记录，无需注册账号。",
+    "tl": "Huwag nang kalimutan kung sino ang may utang sa iyo. Pribado, walang account.",
+    "vi": "Không bao giờ quên ai nợ bạn. Sổ ghi nợ riêng tư, không cần tài khoản.",
+    "ar": "لا تنسَ أبدًا من يدين لك. سجل خاص للديون والسلف، بلا حساب."
    }
   },
   {
